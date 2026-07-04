@@ -7,44 +7,44 @@
   <style>
     :root {
       color-scheme: light;
-      --bg: #f5f7fb;
+      --bg: #f3f6fb;
       --panel: #ffffff;
       --text: #1f2937;
       --muted: #6b7280;
-      --line: #dbe2ea;
+      --line: #d8e0ea;
       --accent: #0f766e;
-      --accent-bg: #f0fdfa;
-      --warn: #92400e;
-      --warn-bg: #fff7ed;
-      --bad: #7f1d1d;
+      --accent-bg: #ecfeff;
+      --focus: #7c2d12;
+      --focus-bg: #fff7ed;
+      --bad: #991b1b;
       --bad-bg: #fef2f2;
-      --tag: #ecfeff;
-      --tag-text: #155e75;
+      --soft: #eef2ff;
+      --soft-text: #3730a3;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font: 14px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font: 14px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
     a { color: #0f5cc0; text-decoration: none; }
     a:hover { text-decoration: underline; }
     .wrap {
-      max-width: 1120px;
+      max-width: 1180px;
       margin: 0 auto;
       padding: 24px 16px 40px;
     }
-    .hero, .section, .card {
+    .hero, .section, .card, .table-wrap {
       background: var(--panel);
       border: 1px solid var(--line);
       border-radius: 8px;
     }
-    .hero, .section { padding: 20px; margin-bottom: 16px; }
+    .hero, .section, .table-wrap { padding: 20px; margin-bottom: 16px; }
     .card { padding: 14px; }
-    h1, h2, h3, p, ul { margin: 0; }
-    h1 { font-size: 28px; margin-bottom: 10px; }
-    h2 { font-size: 18px; margin-bottom: 14px; }
+    h1, h2, h3, p, ul, table { margin: 0; }
+    h1 { font-size: 29px; margin-bottom: 10px; }
+    h2 { font-size: 19px; margin-bottom: 14px; }
     h3 { font-size: 15px; margin-bottom: 8px; }
     .meta {
       display: grid;
@@ -63,35 +63,30 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
     }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
     .list {
       padding-left: 18px;
     }
-    .list li { margin: 6px 0; }
+    .list li + li { margin-top: 8px; }
     .muted { color: var(--muted); }
-    .tag, .tag-warn, .tag-bad {
-      display: inline-block;
-      margin-right: 6px;
-      padding: 2px 8px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 600;
-    }
-    .tag { background: var(--tag); color: var(--tag-text); }
-    .tag-warn { background: var(--warn-bg); color: var(--warn); }
-    .tag-bad { background: var(--bad-bg); color: var(--bad); }
+    .small { font-size: 12px; }
     .post {
       border-top: 1px solid var(--line);
-      margin-top: 14px;
       padding-top: 14px;
+      margin-top: 14px;
     }
     .post:first-of-type {
       border-top: 0;
-      margin-top: 0;
       padding-top: 0;
+      margin-top: 0;
     }
     .kv {
       display: grid;
-      grid-template-columns: 118px 1fr;
+      grid-template-columns: 120px 1fr;
       gap: 8px 12px;
       margin-top: 10px;
     }
@@ -99,22 +94,58 @@
       color: var(--muted);
       font-weight: 600;
     }
-    .note {
-      margin-top: 10px;
-      padding: 10px 12px;
-      background: #f8fafc;
-      border-radius: 6px;
-    }
-    .small { font-size: 12px; }
     .pill-row {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
       margin-bottom: 10px;
     }
-    @media (max-width: 760px) {
-      .grid { grid-template-columns: 1fr; }
+    .tag, .tag-focus, .tag-bad, .tag-soft {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .tag { background: var(--accent-bg); color: var(--accent); }
+    .tag-focus { background: var(--focus-bg); color: var(--focus); }
+    .tag-bad { background: var(--bad-bg); color: var(--bad); }
+    .tag-soft { background: var(--soft); color: var(--soft-text); }
+    .note {
+      margin-top: 10px;
+      padding: 10px 12px;
+      background: #f8fafc;
+      border-radius: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      padding: 10px 8px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0;
+    }
+    tr:last-child td { border-bottom: 0; }
+    code {
+      padding: 1px 4px;
+      border-radius: 4px;
+      background: #eef2f7;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12px;
+    }
+    @media (max-width: 860px) {
+      .grid, .grid-3 { grid-template-columns: 1fr; }
       .kv { grid-template-columns: 1fr; gap: 4px; }
+      .table-wrap { overflow-x: auto; }
+      table { min-width: 760px; }
     }
   </style>
 </head>
@@ -122,24 +153,24 @@
   <div class="wrap">
     <section class="hero">
       <h1>每日舆情监测简报</h1>
-      <p class="meta">
-        <span>生成时间：2026-07-05 00:41:52 CST（Asia/Shanghai）</span>
-        <span>监测窗口：2026-07-04 00:41:52 CST 至 2026-07-05 00:41:52 CST</span>
-        <span>主题：物理 AI、AI 股票、机器人 / 自动驾驶 / 激光雷达、Hesai / HESAI / HSAI / 禾赛科技</span>
-      </p>
+      <div class="meta">
+        <span>生成时间：2026-07-05 01:30:13 CST（Asia/Shanghai）</span>
+        <span>监测窗口：2026-07-04 01:30:13 CST 至 2026-07-05 01:30:13 CST</span>
+        <span>监测主题：物理 AI、AI 股票、机器人 / 自动驾驶 / 激光雷达、Hesai / HESAI / HSAI / 禾赛科技</span>
+      </div>
       <div class="overview">
-        一句话总览：过去 24 小时内，公开可核验讨论仍由 broad AI 与 physical AI 主导；X 侧最明确的新内容来自 @aleabitoreddit，Reddit 侧能看到 AI 股票与机器人讨论，但未检出新的高可信 HESAI / HSAI 公开热门帖。
+        一句话总览：过去 24 小时内，公开可核验讨论仍以 broad AI、humanoid、physical AI 为主；在本次重点窗口中未发现新的高可信 HESAI / HSAI 热门讨论，但出现一条较新的 China robotics 投资帖把 Hesai 明确列入“传感器 / robot eyes”链条，整体仍属题材联想而非单独催化。
       </div>
     </section>
 
     <section class="section">
       <h2>执行摘要</h2>
       <ul class="list">
-        <li><span class="tag-bad">未发现 HESAI 重点讨论</span> Reddit 的 r/stocks、r/investing、r/wallstreetbets、r/ChinaStocks 在 `HESAI OR HSAI` 检索下，过去 24 小时没有返回可确认的新帖。</li>
-        <li><span class="tag">发现 @aleabitoreddit 新帖</span> 过去 24 小时内至少 3 条公开发言进入窗口，主题集中在 humanoid、机器人替代劳动力、AI 基础设施。</li>
-        <li>Reddit 的新增可见讨论更偏 broad AI：一条是 r/wallstreetbets 的 OpenAI pre-IPO 热帖，另一条是 r/stocks 对 AI 股票波动是否被机构操纵的讨论。</li>
-        <li>“Physical AI”在 Reddit 仍是活跃问题导向话题，AskRobotics 有 4 小时前的入门帖，说明关注点更多在概念理解与落地路径。</li>
-        <li>Keith Bradsher 的 NYT 作者页最新署名文章仍停留在 2026-07-02，未进入本次窗口。</li>
+        <li><span class="tag-focus">发现 HESAI 提及</span> Reddit 的 <code>r/ChinaStocks</code> 检索结果里能看到一条仍在搜索页前列的旧帖《The "China Robot" trade is just starting. 3 sleeper picks.》，正文把 Hesai Technology（<code>$HSAI</code>）定义为机器人与自动驾驶的“眼睛”；但该帖页面时间为 <strong>5mo ago</strong>，不属于本次 24 小时窗口。</li>
+        <li><span class="tag-bad">过去 24 小时未见 HESAI 热门新帖</span> 在 <code>r/stocks</code>、<code>r/investing</code>、<code>r/wallstreetbets</code>、<code>r/ChinaStocks</code> 的 <code>HESAI OR HSAI</code> 定向检索下，没有核验到过去 24 小时内的新帖。</li>
+        <li><span class="tag">X 侧可核验新内容集中在 @aleabitoreddit</span> 其过去 24 小时公开页面至少出现 3 条新帖，主题集中在 humanoid 替代劳动力、机器人叙事和 AI 基础设施，对 Hesai 只构成间接情绪映射。</li>
+        <li>Reddit 的新增热门讨论仍偏 broad AI：一条是 <code>r/wallstreetbets</code> 的 OpenAI pre-IPO 热帖，一条是 <code>r/stocks</code> 的 AI 股票波动讨论，一条是 <code>r/AskRobotics</code> 的 “Physical AI / agentic robotics” 入门帖。</li>
+        <li><span class="tag-soft">媒体面缺少新催化</span> 针对用户给定重点记者名单做过去 24 小时检索后，未发现“新发表且与 Hesai 相关性较高”的报道，当前外网舆情更偏行业主题而非公司事件。</li>
       </ul>
     </section>
 
@@ -147,159 +178,218 @@
       <h2>X 与 Reddit 舆情</h2>
       <div class="grid">
         <div class="card">
-          <h3>X 平台</h3>
-          <p class="muted">本次以 X 原帖链接加公开聚合页 DailyGram 做交叉核验。X 原生页面在未登录公开访问下可读性较差，部分时间与内容以平台展示为准。</p>
+          <h3>X</h3>
+          <p class="muted">优先核验 <code>@aleabitoreddit</code>。X 原生公开页在未登录状态下可读性较差，本次以 X 原帖链接和公开聚合页 DailyGram 交叉核验；时间以页面展示为准。</p>
         </div>
         <div class="card">
-          <h3>Reddit 平台</h3>
-          <p class="muted">本次使用 Chrome 插件直查 Reddit 页面。需要注意，Reddit 搜索有时会回落到旧帖或“all of Reddit”视图，因此 24 小时判断以页面显示时间为准。</p>
+          <h3>Reddit</h3>
+          <p class="muted">按 AGENTS 要求使用 Chrome 新标签页核验 Reddit 搜索页和帖子页。Reddit 搜索可能把旧帖顶在前列，因此本简报对“过去 24 小时”的判断一律以帖子详情页时间字段为准。</p>
         </div>
       </div>
 
       <div class="post">
         <div class="pill-row">
           <span class="tag">X</span>
-          <span class="tag-warn">物理 AI</span>
+          <span class="tag-focus">Humanoid</span>
         </div>
-        <h3>@aleabitoreddit - 机器人替代劳动力</h3>
+        <h3>@aleabitoreddit：机器人替代劳动力</h3>
         <div class="kv">
           <div>平台</div><div>X</div>
           <div>作者 / 账号</div><div>@aleabitoreddit</div>
-          <div>发布时间</div><div>2026-07-04 18:23:27 CST（源时间为 2026-07-04T10:23:27Z）</div>
+          <div>发布时间</div><div>2026-07-04 18:23:27 CST（源时间 2026-07-04T10:23:27+00:00）</div>
           <div>原文摘录</div><div>“Bruh, when I first tried out ChatGPT around 2023, I thought LLMs were garbage at coding...”</div>
           <div>中文直译</div><div>“说真的，我 2023 年刚试 ChatGPT 时，还觉得 LLM 写代码很垃圾……”</div>
           <div>链接</div><div><a href="https://x.com/aleabitoreddit/status/2073351980131754203" target="_blank" rel="noopener noreferrer">X 原帖</a>；<a href="https://dailygram.me/x/aleabitoreddit" target="_blank" rel="noopener noreferrer">DailyGram 聚合页</a></div>
-          <div>与 Hesai 的相关性判断</div><div>间接相关。强化“物理 AI / humanoid”主叙事，但没有直接触及 Hesai、激光雷达或 HSAI。</div>
+          <div>与 Hesai 的相关性判断</div><div>间接相关。强化 physical AI / humanoid 主叙事，但没有直接提及 Hesai、lidar 或 HSAI。</div>
         </div>
       </div>
 
       <div class="post">
         <div class="pill-row">
           <span class="tag">X</span>
-          <span class="tag-warn">AI 基础设施</span>
+          <span class="tag-soft">AI 基础设施</span>
         </div>
-        <h3>@aleabitoreddit - 浮动式 AI 数据中心</h3>
+        <h3>@aleabitoreddit：浮动式数据中心</h3>
         <div class="kv">
           <div>平台</div><div>X</div>
           <div>作者 / 账号</div><div>@aleabitoreddit</div>
-          <div>发布时间</div><div>2026-07-04 15:18:16 CST（源时间为 2026-07-04T07:18:16Z）</div>
+          <div>发布时间</div><div>2026-07-04 15:18:16 CST（源时间 2026-07-04T07:18:16+00:00）</div>
           <div>原文摘录</div><div>“TIL floating DC and ocean compute exists? Apparently it’s free cooling + optimal for places in tight geography...”</div>
           <div>中文直译</div><div>“今天才知道浮动式数据中心和海上计算已经存在？显然它有免费冷却，而且适合空间紧张的地区……”</div>
           <div>链接</div><div><a href="https://x.com/aleabitoreddit/status/2073305375957541013" target="_blank" rel="noopener noreferrer">X 原帖</a>；<a href="https://dailygram.me/x/aleabitoreddit" target="_blank" rel="noopener noreferrer">DailyGram 聚合页</a></div>
-          <div>与 Hesai 的相关性判断</div><div>低。主题偏算力与基础设施想象，对 Hesai 没有直接映射。</div>
+          <div>与 Hesai 的相关性判断</div><div>低。更偏 AI 算力设施，不构成 Hesai 直接催化。</div>
         </div>
       </div>
 
       <div class="post">
         <div class="pill-row">
           <span class="tag">X</span>
-          <span class="tag-warn">Humanoid</span>
+          <span class="tag-focus">Physical AI</span>
         </div>
-        <h3>@aleabitoreddit - 对 humanoid 替代就业的判断</h3>
+        <h3>@aleabitoreddit：humanoid 是否会取代人类工作</h3>
         <div class="kv">
           <div>平台</div><div>X</div>
           <div>作者 / 账号</div><div>@aleabitoreddit</div>
-          <div>发布时间</div><div>2026-07-04 08:07:23 CST（源时间为 2026-07-04T00:07:23Z）</div>
+          <div>发布时间</div><div>2026-07-04 08:07:23 CST（源时间 2026-07-04T00:07:23+00:00）</div>
           <div>原文摘录</div><div>“I'm bearish on humans. Hard to see people still having a job if humanoids come out at &lt;$15K mass production.”</div>
           <div>中文直译</div><div>“我对人类是看空的。如果 humanoid 能以低于 1.5 万美元实现量产，很难想象人们还能保住工作。”</div>
           <div>链接</div><div><a href="https://x.com/aleabitoreddit/status/2073196939785711796" target="_blank" rel="noopener noreferrer">X 原帖</a>；<a href="https://dailygram.me/x/aleabitoreddit" target="_blank" rel="noopener noreferrer">DailyGram 聚合页</a></div>
-          <div>与 Hesai 的相关性判断</div><div>间接相关。属于 embodied AI 的风险偏好表达，不是 Hesai 单点催化。</div>
+          <div>与 Hesai 的相关性判断</div><div>间接相关。属于 embodied AI 风险偏好表达，不是 Hesai 单点事件。</div>
         </div>
       </div>
 
       <div class="post">
         <div class="pill-row">
           <span class="tag">Reddit</span>
-          <span class="tag-warn">AI 股票</span>
+          <span class="tag-focus">【重点：涉及 HESAI】</span>
+          <span class="tag-bad">不在 24 小时窗口</span>
         </div>
-        <h3>r/wallstreetbets - OpenAI pre-IPO 股权热帖</h3>
+        <h3>r/ChinaStocks：The "China Robot" trade is just starting. 3 sleeper picks.</h3>
+        <div class="kv">
+          <div>平台</div><div>Reddit / r/ChinaStocks</div>
+          <div>作者</div><div>FaithlessnessGlum979</div>
+          <div>发布时间</div><div>5mo ago（时间以 Reddit 页面显示为准）</div>
+          <div>原文摘录</div><div>“The Eyes: Hesai Technology ($HSAI)... You can't have a robot economy without sensors. Hesai dominates the global market for affordable, high-performance LiDAR.”</div>
+          <div>中文直译</div><div>“眼睛：Hesai Technology（$HSAI）……没有传感器就不会有机器人经济。Hesai 在高性价比高性能激光雷达市场占据主导地位。”</div>
+          <div>链接</div><div><a href="https://www.reddit.com/r/ChinaStocks/comments/1qkt6tp/the_china_robot_trade_is_just_starting_3_sleeper/" target="_blank" rel="noopener noreferrer">Reddit 原帖</a></div>
+          <div>与 Hesai 的相关性判断</div><div>高相关，但这是旧帖，只能说明“China robot trade”叙事里 Hesai 仍被当作传感器核心标的，不代表过去 24 小时新增催化。</div>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="pill-row">
+          <span class="tag">Reddit</span>
+          <span class="tag-soft">AI 股票</span>
+        </div>
+        <h3>r/wallstreetbets：OpenAI pre-IPO 股权热帖</h3>
         <div class="kv">
           <div>平台</div><div>Reddit / r/wallstreetbets</div>
           <div>作者</div><div>Accomplished-Air439</div>
-          <div>发布时间</div><div>14h ago（时间以 Reddit 页面显示为准）</div>
+          <div>发布时间</div><div>15h ago（时间以 Reddit 页面显示为准）</div>
           <div>原文摘录</div><div>“Usually the final phase of a bubble is a crazy real estate market. Paying for houses in pre-IPO stocks might be the new thing this round.”</div>
-          <div>中文直译</div><div>“泡沫最后阶段通常会出现疯狂的房地产市场。用上市前股票去买房，也许会成为这一轮的新现象。”</div>
+          <div>中文直译</div><div>“泡沫的最后阶段通常会出现疯狂的房地产市场。用上市前股票买房，也许会成为这一轮的新现象。”</div>
           <div>链接</div><div><a href="https://www.reddit.com/r/wallstreetbets/comments/1umx56q/buying_homes_with_preipo_openai_stock_new_trend/" target="_blank" rel="noopener noreferrer">Reddit 原帖</a></div>
-          <div>与 Hesai 的相关性判断</div><div>低。反映 AI 股票投机情绪升温，但与 Hesai 或 lidar 无直接关系。</div>
+          <div>与 Hesai 的相关性判断</div><div>低。反映 AI 资产投机情绪偏热，但不直接指向 Hesai。</div>
         </div>
       </div>
 
       <div class="post">
         <div class="pill-row">
           <span class="tag">Reddit</span>
-          <span class="tag-warn">AI 股票</span>
+          <span class="tag-soft">AI 股票</span>
         </div>
-        <h3>r/stocks - 对 AI 股票波动是否被机构操纵的讨论</h3>
+        <h3>r/stocks：AI 股票是否被“大鲸鱼”操纵</h3>
         <div class="kv">
           <div>平台</div><div>Reddit / r/stocks</div>
           <div>作者</div><div>Mundane_Bit3096</div>
-          <div>发布时间</div><div>1d ago（时间以 Reddit 页面显示为准，处于 24 小时窗口边界）</div>
+          <div>发布时间</div><div>1d ago（位于 24 小时窗口边缘，时间以 Reddit 页面显示为准）</div>
           <div>原文摘录</div><div>“Am I correct to assume that these ‘whales’ choose to DUMP or INVEST in the market at a specific moment as to manipulate the market?”</div>
-          <div>中文直译</div><div>“我是否可以理解为，这些‘巨鲸’会在特定时点一起抛售或买入，从而操纵市场？”</div>
+          <div>中文直译</div><div>“我是否可以理解为，这些‘巨鲸’会在特定时点一起抛售或买入，以此操纵市场？”</div>
           <div>链接</div><div><a href="https://www.reddit.com/r/stocks/comments/1umbyz0/ai_stocks_are_being_manipulated_by_big_whales_am/" target="_blank" rel="noopener noreferrer">Reddit 原帖</a></div>
-          <div>与 Hesai 的相关性判断</div><div>低。说明 AI 股票波动讨论仍活跃，但没有指向 Hesai / HSAI。</div>
+          <div>与 Hesai 的相关性判断</div><div>低。说明 AI 股票波动话题仍热，但没有点名 Hesai / HSAI。</div>
         </div>
       </div>
 
       <div class="post">
         <div class="pill-row">
           <span class="tag">Reddit</span>
-          <span class="tag-warn">Physical AI</span>
+          <span class="tag-focus">Physical AI</span>
         </div>
-        <h3>r/AskRobotics - “Physical AI” 入门讨论</h3>
+        <h3>r/AskRobotics：agentic robotics / Physical AI 入门讨论</h3>
         <div class="kv">
           <div>平台</div><div>Reddit / r/AskRobotics</div>
           <div>作者</div><div>Frosty-Telephone-747</div>
-          <div>发布时间</div><div>4h ago（时间以 Reddit 页面显示为准）</div>
+          <div>发布时间</div><div>5h ago（时间以 Reddit 页面显示为准）</div>
           <div>原文摘录</div><div>“What makes them say ‘Physical AI’? Is it because AI agents are controlling the robots/hardware?”</div>
           <div>中文直译</div><div>“为什么大家会说‘Physical AI’？是因为 AI agents 在控制机器人或硬件吗？”</div>
           <div>链接</div><div><a href="https://www.reddit.com/r/AskRobotics/comments/1un7wko/im_still_learning_but_how_are_ai_agents_being/" target="_blank" rel="noopener noreferrer">Reddit 原帖</a></div>
-          <div>与 Hesai 的相关性判断</div><div>间接相关。反映市场对“感知+执行”落地链条的兴趣，但没有直接提到 Hesai。</div>
-        </div>
-      </div>
-
-      <div class="post">
-        <div class="pill-row">
-          <span class="tag-bad">HESAI 检索</span>
-        </div>
-        <h3>HESAI / HSAI 定向检索结果</h3>
-        <div class="note">
-          过去 24 小时内未发现高可信公开讨论。Chrome 插件直查 Reddit 时，r/investing 明确返回“we couldn’t find any results”；r/stocks、r/wallstreetbets、r/ChinaStocks 则只回落到旧帖或泛搜索结果，没有出现 24 小时内可确认的新 HESAI / HSAI 讨论。
+          <div>与 Hesai 的相关性判断</div><div>间接相关。说明市场仍在追问感知+执行链条如何落地，但没有明确点到 lidar 厂商。</div>
         </div>
       </div>
     </section>
 
     <section class="section">
       <h2>市场关注重点总结</h2>
-      <ul class="list">
-        <li>投资者公开讨论的重心仍在 broad AI、humanoid 和 AI 基础设施，而不是单一激光雷达公司。</li>
-        <li>“物理 AI”话题热度在持续，更多是概念扩散和应用想象，尚未明显下沉到 Hesai 这类具体标的。</li>
-        <li>Reddit 的 AI 股票讨论情绪偏交易化，围绕泡沫、pre-IPO 权益和机构操纵的怀疑更明显。</li>
-        <li>与 Hesai 相关的机会：如果市场从 humanoid / autonomous systems 继续往感知链条下钻，激光雷达公司可能获得边际关注。</li>
-        <li>与 Hesai 相关的风险：当前没有新的公开舆论把 Hesai 推成焦点，说明注意力仍停留在更宽泛的 AI 主线。</li>
-      </ul>
+      <div class="grid-3">
+        <div class="card">
+          <h3>投资者在看什么</h3>
+          <ul class="list">
+            <li>humanoid 是否会形成下一轮 AI 主线</li>
+            <li>AI 股票交易是否进入高波动 / 高投机阶段</li>
+            <li>机器人产业链里“眼睛、手、脑、执行器”谁最值钱</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>升温主题</h3>
+          <ul class="list">
+            <li>physical AI / embodied AI</li>
+            <li>China robotics / industrial AI</li>
+            <li>AI 基础设施与算力外延叙事</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>对 Hesai 的机会与风险</h3>
+          <ul class="list">
+            <li>机会：若 robotics 叙事继续向传感器链条扩散，Hesai 容易被重新纳入“机器人之眼”讨论</li>
+            <li>风险：当前热度仍停留在 broad AI 叙事，尚未形成公司级讨论或新催化</li>
+            <li>风险：媒体层面没有新的 24 小时内高相关报道，情绪传导偏弱</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section class="section">
-      <h2>Keith Bradsher 报道追踪</h2>
+      <h2>重点媒体与记者报道追踪</h2>
+      <p class="muted">检索范围覆盖用户给定完整名单，并同时尝试了别名 / 拼写修正（如 <code>Josh Wasington / Josh Washington</code>、<code>Doug Boulduc / Doug Bolduc</code>、<code>The Detriot News / The Detroit News</code>、<code>The Glass Alamac / The Glass Almanac</code>）。</p>
       <div class="note">
-        过去 24 小时内未发现 Keith Bradsher 新发表报道。
+        过去 24 小时内未发现上述重点记者新发表、且与 Hesai 相关性较高的报道。
       </div>
-      <div class="kv" style="margin-top: 12px;">
-        <div>核验来源</div><div><a href="https://www.nytimes.com/by/keith-bradsher" target="_blank" rel="noopener noreferrer">The New York Times 作者页</a></div>
-        <div>最新可见稿件</div><div>2026-07-02，《Imprisoned Chinese Journalist Seeks Medical Parole for Lung Tumor》。</div>
-        <div>重点信息</div><div>本次窗口内未见新增署名稿，因此没有新的中国制造、出口监管、汽车供应链或中美摩擦报道需要并入 Hesai 风险判断。</div>
-        <div>对 Hesai 的潜在影响</div><div>暂无新增记者报道触发的新风险或新催化。</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>分组</th>
+              <th>核验结果</th>
+              <th>说明</th>
+              <th>潜在影响</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>纽约时报 / FT / WSJ / Bloomberg / BBC</td>
+              <td>未见窗口内高相关新稿</td>
+              <td>对 Keith Bradsher、Melissa Eddy、Edward White、Eleanor Olcott、Robin Harding、Gloria Li、Jonathan Cheng、Jiahui Huang、Eric Bellman、Linda Lew、Stephen McDonell 做了作者名 + 媒体站点定向检索，未发现落入窗口且与 Hesai 直接相关的新报道。</td>
+              <td>无新增公司级催化。</td>
+            </tr>
+            <tr>
+              <td>Reuters / TechCrunch / Nikkei</td>
+              <td>未见窗口内高相关新稿</td>
+              <td>对 Abhirup Roy、Nick Carey、Kirsten Korosec、Rebecca Bellan、Sean O'Kane、Wataru Suzuki、Eiki Hayashi 做了“作者名 + autonomous / robotaxi / robotics / lidar”检索，未发现可确认的新稿。</td>
+              <td>自动驾驶与机器人线缺少新增媒体推动。</td>
+            </tr>
+            <tr>
+              <td>Automotive News / Automotive News Europe / CNBC / Forbes / Spiegel / FAZ</td>
+              <td>未见窗口内高相关新稿</td>
+              <td>对 Molly Boigon、Pete Bigelow、Jamie Butters、Hans Greimel、John Irwin、Lindsay VanHulle、Laurence Iliff、Doug Bolduc、Lois Jones、Paige Tortelli、Sabbir Rangwala、Sam Abuelsamid、Arvid Haitsch、Gustav Theile、Tobias Piller 做了站点定向检索，未发现与 Hesai 直接相关的新内容。</td>
+              <td>汽车供应链情绪没有新外媒触发点。</td>
+            </tr>
+            <tr>
+              <td>The Robot Report / The Information / 其他垂类</td>
+              <td>有机器人相关更新，但未形成 Hesai 相关报道</td>
+              <td>The Robot Report 搜索面可见站点更新，但未核验到 Brianna Wessling 或 Mike Oitzman 在窗口内发布、且与 Hesai 直接相关的文章；Steve LeVine 也未见与本题高度相关的新稿。</td>
+              <td>机器人板块热度存在，但未传到 Hesai 名义层面。</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
     <section class="section">
       <h2>@aleabitoreddit 言论追踪</h2>
       <ul class="list">
-        <li>过去 24 小时内至少 3 条公开发言进入监测窗口。</li>
-        <li>主题集中在 humanoid 替代劳动力、physical AI 迭代速度、AI 基础设施。</li>
-        <li>未发现直接点名 Hesai / HESAI / HSAI 的新帖。</li>
-        <li>X 原生公开页可读性不足，因此时间与内容同时参照 DailyGram 与原始状态链接。</li>
+        <li>过去 24 小时内可核验到 3 条公开发言，全部落在监测窗口内。</li>
+        <li>主题依次为 humanoid 替代劳动力、海上 / 浮动式 AI 基础设施、physical AI 对就业的冲击。</li>
+        <li>可能对 Hesai 的影响：更像情绪底层。它们支持“机器人 / embodied AI”板块继续被讨论，但没有直接把市场注意力拉到激光雷达或 Hesai。</li>
       </ul>
     </section>
 
@@ -308,24 +398,35 @@
       <div class="grid">
         <div class="card">
           <h3>搜索关键词</h3>
-          <p class="small">Hesai / HESAI / HSAI / 禾赛科技 / physical AI / AI stocks / robotics / autonomous driving AI / lidar / from:aleabitoreddit / Keith Bradsher</p>
+          <ul class="list small">
+            <li><code>site:reddit.com/r/stocks HESAI OR HSAI</code></li>
+            <li><code>site:reddit.com/r/investing HESAI OR HSAI</code></li>
+            <li><code>site:reddit.com/r/wallstreetbets HESAI OR HSAI</code></li>
+            <li><code>site:reddit.com/r/ChinaStocks HESAI OR HSAI</code></li>
+            <li><code>site:x.com/aleabitoreddit</code></li>
+            <li><code>from:aleabitoreddit</code></li>
+            <li><code>"作者名" + 媒体站点 + when:1d</code></li>
+            <li><code>"作者名" + autonomous / robotics / lidar + 站点</code></li>
+          </ul>
         </div>
         <div class="card">
-          <h3>主要数据来源</h3>
-          <p class="small">
-            <a href="https://dailygram.me/x/aleabitoreddit" target="_blank" rel="noopener noreferrer">DailyGram: @aleabitoreddit</a><br>
-            <a href="https://x.com/aleabitoreddit/status/2073351980131754203" target="_blank" rel="noopener noreferrer">X status 2073351980131754203</a><br>
-            <a href="https://x.com/aleabitoreddit/status/2073305375957541013" target="_blank" rel="noopener noreferrer">X status 2073305375957541013</a><br>
-            <a href="https://x.com/aleabitoreddit/status/2073196939785711796" target="_blank" rel="noopener noreferrer">X status 2073196939785711796</a><br>
-            <a href="https://www.reddit.com/r/wallstreetbets/comments/1umx56q/buying_homes_with_preipo_openai_stock_new_trend/" target="_blank" rel="noopener noreferrer">Reddit: WSB OpenAI pre-IPO</a><br>
-            <a href="https://www.reddit.com/r/stocks/comments/1umbyz0/ai_stocks_are_being_manipulated_by_big_whales_am/" target="_blank" rel="noopener noreferrer">Reddit: r/stocks AI stocks</a><br>
-            <a href="https://www.reddit.com/r/AskRobotics/comments/1un7wko/im_still_learning_but_how_are_ai_agents_being/" target="_blank" rel="noopener noreferrer">Reddit: r/AskRobotics Physical AI</a><br>
-            <a href="https://www.nytimes.com/by/keith-bradsher" target="_blank" rel="noopener noreferrer">NYT: Keith Bradsher 作者页</a>
-          </p>
+          <h3>数据来源</h3>
+          <ul class="list small">
+            <li>Reddit 搜索页与帖子详情页</li>
+            <li>X 原帖链接</li>
+            <li>DailyGram 的 <code>@aleabitoreddit</code> 聚合页</li>
+            <li>Google 搜索 / Google News RSS 结果</li>
+            <li>部分媒体作者页 / 站点定向搜索结果</li>
+          </ul>
         </div>
-      </div>
-      <div class="note" style="margin-top: 12px;">
-        未覆盖或访问受限说明：1）X 原生公开页在当前环境下几乎不返回可读正文，因而 X 内容依赖公开聚合页与搜索引擎摘要交叉核验；2）Reddit 搜索在子版块模式下有时会回落到旧帖或泛搜索结果；3）未发现高可信 HESAI / HSAI 结果时，报告按“未检出”处理，而不推断为“绝对无人讨论”。
+        <div class="card">
+          <h3>访问限制与未覆盖说明</h3>
+          <ul class="list small">
+            <li>X 原生公开页在未登录状态下内容可读性有限，部分时间与摘录以平台或聚合页展示为准。</li>
+            <li>Reddit 搜索结果会把旧帖置顶，因此所有“是否属于过去 24 小时”的判断都回到帖子详情页再次核验。</li>
+            <li>部分媒体站点存在付费墙或作者页结构差异；对无法直接展开的结果，本次只把可核验搜索结果作为辅助，不把无法确认的内容写成事实。</li>
+          </ul>
+        </div>
       </div>
     </section>
   </div>
