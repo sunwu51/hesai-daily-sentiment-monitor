@@ -79,15 +79,67 @@ Reddit 重点子版块：
 
 注意：不要编造帖子。找不到时要明确写“过去 24 小时内未发现高可信公开讨论”。
 
-### 2. Keith Bradsher 过去 24 小时报道
+### 2. 重点媒体与记者过去 24 小时报道
 
-检索记者 Keith Bradsher 在过去 24 小时内发表的报道。
+检索以下媒体与记者在过去 24 小时内发表的报道。不要只检索 Keith Bradsher，必须覆盖完整名单；如果某位记者未发现新报道，也要在结果中如实说明。
 
 重点关注来源包括但不限于：
 
-- The New York Times
+- 记者所属媒体官网
 - 记者个人作者页
 - 搜索引擎新闻结果
+- 公开转载或聚合页面，但最终优先核验原始媒体链接
+
+如记者姓名或媒体名称存在疑似拼写差异，应同时检索用户给定写法和常见媒体公开写法，并在附录注明采用过的别名或校正写法。例如：`Josh Wasington / Josh Washington`、`Doug Boulduc / Doug Bolduc`、`The Detriot News / The Detroit News`、`The Glass Alamac / The Glass Almanac`。
+
+重点记者名单：
+
+- BBC：Stephen McDonell
+- Bloomberg News：Linda Lew
+- Charlton Media：Gwyneth Bejer
+- Financial Times：Gloria Li
+- Financial Times：Edward White
+- Financial Times：Robin Harding
+- Financial Times：Eleanor Olcott
+- Frankfurter Allgemeine：Gustav Theile
+- New York Times：Keith Bradsher
+- Nikkei Asia：Wataru Suzuki
+- Wall Street Journal：Jonathan Cheng
+- Wall Street Journal：Jiahui Huang
+- Acumen Media：Josh Wasington
+- Auto Haus：Wilfried Boehler
+- Autoambition：Niklas Kurz
+- Automotive News：Molly Boigon
+- Automotive News：Pete Bigelow
+- Automotive News：Jamie Butters
+- Automotive News：Hans Greimel
+- Automotive News：John Irwin
+- Automotive News：Lindsay VanHulle
+- Automotive News：Laurence Iliff
+- Automotive News Europe：Doug Boulduc
+- Automotive News Europe：Lois Jones
+- CNBC：Paige Tortelli
+- Der Spiegel：Arvid Haitsch
+- Forbes：Sabbir Rangwala
+- Forbes：Sam Abuelsamid
+- Frankfurter Allgemeine Zeitung：Tobias Piller
+- Futurride：Kevin Jost
+- Motor1.com：Massimo Grassi
+- MT Newswires：Khushi Mandowara
+- New York Times：Melissa Eddy
+- Nikkei：Eiki Hayashi
+- Reuters：Abhirup Roy
+- Reuters：Nick Carey
+- TechCrunch：Kirsten Korosec
+- TechCrunch：Rebecca Bellan
+- TechCrunch：Sean O'Kane
+- The Detroit News：Brena Noble
+- The Glass Alamac：Brian Foster
+- The Information：Steve LeVine
+- The Robot Report：Brianna Wessling
+- The Robot Report：Mike Oitzman
+- The Wall Street Journal：Eric Bellman
+- The Washington Post Intelligence：Jason Dean
 
 每篇报道需要整理：
 
@@ -107,7 +159,7 @@ Reddit 重点子版块：
 如果没有发现过去 24 小时内的新报道，明确写：
 
 ```text
-过去 24 小时内未发现 Keith Bradsher 新发表报道。
+过去 24 小时内未发现上述重点记者新发表、且与 Hesai 相关性较高的报道。
 ```
 
 ### 3. X 博主 @aleabitoreddit 过去 24 小时言论
@@ -154,7 +206,7 @@ Reddit 重点子版块：
    - 哪些主题升温或降温
    - 与 Hesai 相关的机会或风险
 
-5. Keith Bradsher 报道追踪
+5. 重点媒体与记者报道追踪
    - 报道列表
    - 重点信息
    - 对 Hesai 的潜在影响
@@ -200,10 +252,11 @@ Reddit 重点子版块：
 基本原则：
 
 - 先用 `web_search` 批量检索关键词、平台页面、作者页和新闻结果，快速定位候选信息。
-- 对重要帖子、疑似 HESAI 相关内容、Keith Bradsher 报道、@aleabitoreddit 发言，尽量打开原始链接核验原文、发布时间和上下文。
+- 对重要帖子、疑似 HESAI 相关内容、重点媒体与记者报道、@aleabitoreddit 发言，尽量打开原始链接核验原文、发布时间和上下文。
 - Reddit、X 等带风控、登录态、动态加载的平台，默认优先使用 `chrome` 插件，不要优先使用内置 browser 插件。
 - 除非用户明确要求内置 browser，或 Chrome 插件明确不可用，否则不要使用内置 browser 插件去打开 Reddit / X。
 - 对无法通过 Chrome 访问的页面，应记录访问限制，并使用可核验的搜索结果或公开缓存信息作为辅助依据；不能确认的内容不要写成事实。
+- 对 X 页面，如果 Chrome 插件打开的任务标签页已经确认带有用户登录态，不要把“页面正文抓取不稳定 / 动态加载失败 / 公开内容读取不完整”表述成“未登录”。应明确写成“已处于登录态，但自动化读取页面内容受限”，并把“登录态问题”和“页面可读性 / 抓取稳定性问题”区分开。
 - 最终简报中应在附录列明主要使用的数据来源，并注明哪些来源存在访问限制。
 
 可使用的搜索查询示例：
@@ -217,7 +270,36 @@ site:reddit.com/r/stocks "physical AI" OR "AI stocks"
 site:x.com HESAI OR HSAI "AI"
 site:x.com "physical AI" stocks
 site:nytimes.com "Keith Bradsher"
-Keith Bradsher past 24 hours
+site:nytimes.com "Melissa Eddy"
+site:ft.com "Edward White" OR "Eleanor Olcott" OR "Robin Harding" OR "Gloria Li"
+site:reuters.com "Abhirup Roy" OR "Nick Carey"
+site:wsj.com "Jonathan Cheng" OR "Jiahui Huang" OR "Eric Bellman"
+site:techcrunch.com "Kirsten Korosec" OR "Rebecca Bellan" OR "Sean O'Kane"
+site:autonews.com "Molly Boigon" OR "Pete Bigelow" OR "Jamie Butters" OR "Hans Greimel" OR "John Irwin" OR "Lindsay VanHulle" OR "Laurence Iliff"
+site:autonews.com "Doug Boulduc" OR "Lois Jones"
+site:nikkei.com "Wataru Suzuki" OR "Eiki Hayashi"
+"Stephen McDonell" BBC past 24 hours
+"Linda Lew" Bloomberg past 24 hours
+"Gwyneth Bejer" "Charlton Media" past 24 hours
+"Gustav Theile" "Frankfurter Allgemeine" past 24 hours
+"Paige Tortelli" CNBC past 24 hours
+"Arvid Haitsch" "Der Spiegel" past 24 hours
+"Sabbir Rangwala" Forbes past 24 hours
+"Sam Abuelsamid" Forbes past 24 hours
+"Tobias Piller" "Frankfurter Allgemeine Zeitung" past 24 hours
+"Kevin Jost" Futurride past 24 hours
+"Massimo Grassi" "Motor1.com" past 24 hours
+"Khushi Mandowara" "MT Newswires" past 24 hours
+"Josh Wasington" OR "Josh Washington" "Acumen Media" past 24 hours
+"Wilfried Boehler" "Auto Haus" past 24 hours
+"Niklas Kurz" Autoambition past 24 hours
+"Doug Boulduc" OR "Doug Bolduc" "Automotive News Europe" past 24 hours
+"Brena Noble" "The Detriot News" OR "The Detroit News" past 24 hours
+"Brian Foster" "The Glass Alamac" OR "The Glass Almanac" past 24 hours
+"Steve LeVine" "The Information" past 24 hours
+"Brianna Wessling" "The Robot Report" past 24 hours
+"Mike Oitzman" "The Robot Report" past 24 hours
+"Jason Dean" "Washington Post Intelligence" past 24 hours
 site:x.com/aleabitoreddit
 from:aleabitoreddit
 ```
