@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日舆情监测简报 - 2026-07-04</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --panel: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #dbe2ea;
+      --accent: #0f766e;
+      --warn: #92400e;
+      --warn-bg: #fff7ed;
+      --tag: #ecfeff;
+      --tag-text: #155e75;
+      --bad: #7f1d1d;
+      --bad-bg: #fef2f2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 14px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+    .hero, .section, .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .hero, .section { padding: 20px; margin-bottom: 16px; }
+    h1, h2, h3, p { margin: 0; }
+    h1 { font-size: 28px; margin-bottom: 8px; }
+    h2 { font-size: 18px; margin-bottom: 14px; }
+    h3 { font-size: 15px; margin-bottom: 8px; }
+    .meta, .muted { color: var(--muted); }
+    .meta { display: grid; gap: 6px; margin-top: 10px; }
+    .overview {
+      margin-top: 14px;
+      padding: 12px 14px;
+      background: #f0fdfa;
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .card { padding: 14px; }
+    .list { margin: 0; padding-left: 18px; }
+    .list li { margin: 6px 0; }
+    .tag, .tag-warn, .tag-bad {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-right: 6px;
+    }
+    .tag { background: var(--tag); color: var(--tag-text); }
+    .tag-warn { background: var(--warn-bg); color: var(--warn); }
+    .tag-bad { background: var(--bad-bg); color: var(--bad); }
+    .post {
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+      margin-top: 14px;
+    }
+    .post:first-child {
+      border-top: 0;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .kv {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 8px 12px;
+      margin-top: 10px;
+    }
+    .kv div:nth-child(odd) {
+      color: var(--muted);
+      font-weight: 600;
+    }
+    a { color: #0f5cc0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .note {
+      margin-top: 10px;
+      padding: 10px 12px;
+      background: #f8fafc;
+      border-radius: 6px;
+    }
+    .small { font-size: 12px; }
+    @media (max-width: 760px) {
+      .grid { grid-template-columns: 1fr; }
+      .kv { grid-template-columns: 1fr; gap: 4px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>每日舆情监测简报</h1>
+      <p class="meta">
+        <span>生成时间：2026-07-04 23:55:33 CST（Asia/Shanghai）</span>
+        <span>监测窗口：2026-07-03 23:55:33 CST 至 2026-07-04 23:55:33 CST</span>
+        <span>主题：物理 AI、AI 股票、机器人 / 自动驾驶 / 激光雷达、Hesai / HESAI / HSAI / 禾赛科技</span>
+      </p>
+      <div class="overview">
+        一句话总览：过去 24 小时内，公开可核验信号主要集中在 X 账号 <strong>@aleabitoreddit</strong> 对机器人、humanoid 和 AI 基础设施的连续发帖；可访问结果中未发现高可信、明确指向 HESAI 的新增热门讨论，Reddit 与 X 原生检索均存在访问或索引限制。
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>执行摘要</h2>
+      <ul class="list">
+        <li>已确认 <span class="tag">发现 @aleabitoreddit 新帖</span>，过去 24 小时内至少 3 条公开帖子落在监测窗口内。</li>
+        <li><span class="tag-bad">未发现 HESAI 重点讨论</span> 当前可访问结果中，未抓到新的高可信公开帖子直接讨论 HESAI / HSAI。</li>
+        <li>X 讨论热度偏向 humanoid 替代劳动力、机器人落地节奏、AI 数据中心基础设施，不是 Hesai 单点。</li>
+        <li>Keith Bradsher 的 NYT 作者页可见最新署名文章停留在 2026-07-02；过去 24 小时未见新署名报道。</li>
+        <li>Reddit 直连搜索接口被站点策略拦截，因此 Reddit 部分只能依据搜索引擎可见结果与访问限制做保守判断。</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>X 与 Reddit 舆情</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>X 平台</h3>
+          <p class="muted">过去 24 小时最明确、可核验的新增公开内容，来自 @aleabitoreddit。未抓到新增 HESAI 定向热门帖。</p>
+        </div>
+        <div class="card">
+          <h3>Reddit 平台</h3>
+          <p class="muted">直接访问 Reddit 搜索接口时被站点策略拦截；在可访问搜索结果里，未找到过去 24 小时内可高可信确认的 HESAI / 物理 AI 热门讨论。</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <h3>@aleabitoreddit - 机器人替代劳动力</h3>
+        <div class="kv">
+          <div>平台</div><div>X</div>
+          <div>账号</div><div>@aleabitoreddit</div>
+          <div>发布时间</div><div>2026-07-04 18:23:27 CST（源时间为 2026-07-04T10:23:27Z）</div>
+          <div>原文摘录</div><div>“Bruh, when I first tried out ChatGPT around 2023, I thought LLMs were garbage at coding... People keep saying humanoids can’t do X or Y task today... but it’s about where ...”</div>
+          <div>中文直译</div><div>“说真的，我 2023 年刚试 ChatGPT 时，还觉得 LLM 写代码很垃圾……很多人一直说 humanoid 今天还做不了这个或那个任务……但关键在于它会走到哪里。”</div>
+          <div>链接</div><div><a href="https://x.com/aleabitoreddit/status/2073351980131754203" target="_blank" rel="noopener noreferrer">X 原帖</a>；<a href="https://dailygram.me/x/aleabitoreddit" target="_blank" rel="noopener noreferrer">DailyGram 公开聚合页</a></div>
+          <div>与 Hesai 的相关性</div><div>间接相关。主题落在 humanoid 与物理 AI 渗透率，不是激光雷达或 Hesai 供应链本身。</div>
+        </div>
+      </div>
+
+      <div class="post">
+        <h3>@aleabitoreddit - 浮动式 AI 数据中心</h3>
+        <div class="kv">
+          <div>平台</div><div>X</div>
+          <div>账号</div><div>@aleabitoreddit</div>
+          <div>发布时间</div><div>2026-07-04 15:18:16 CST（源时间为 2026-07-04T07:18:16Z）</div>
+          <div>原文</div><div>“TIL floating DC and ocean compute exists? Apparently it’s free cooling + optimal for places in tight geography… It’s going to be wild taking a cruise ship, and passing by a bunch of $NBIS or Samsung floating AI DCs one day.”</div>
+          <div>中文直译</div><div>“今天才知道浮动式数据中心和海上计算已经存在？显然它有免费冷却，而且很适合地理空间紧张的地方……以后坐游轮路过一堆 $NBIS 或三星的漂浮 AI 数据中心，会很离谱。”</div>
+          <div>链接</div><div><a href="https://x.com/aleabitoreddit/status/2073305375957541013" target="_blank" rel="noopener noreferrer">X 原帖</a>；<a href="https://dailygram.me/x/aleabitoreddit" target="_blank" rel="noopener noreferrer">DailyGram 公开聚合页</a></div>
+          <div>与 Hesai 的相关性</div><div>低。偏 AI 基础设施与算力想象，不直接作用于车载激光雷达链条。</div>
+        </div>
+      </div>
+
+      <div class="post">
+        <h3>@aleabitoreddit - 对 humanoid 替代就业的看空判断</h3>
+        <div class="kv">
+          <div>平台</div><div>X</div>
+          <div>账号</div><div>@aleabitoreddit</div>
+          <div>发布时间</div><div>2026-07-04 08:07:23 CST（源时间为 2026-07-04T00:07:23Z）</div>
+          <div>原文</div><div>“I'm bearish on humans. Hard to see people still having a job if humanoids come out at &lt;$15K mass production. No insurance, no JP Morgan HR cannon scandals. And can do everything a person can, but better + 24/7.”</div>
+          <div>中文直译</div><div>“我对人类是看空的。如果 humanoid 能以低于 1.5 万美元实现量产，很难想象人们还能保住工作。不需要保险，也不会有摩根大通那种 HR 丑闻。而且它能做一个人能做的一切，还更好、全天候 24/7。”</div>
+          <div>链接</div><div><a href="https://x.com/aleabitoreddit/status/2073196939785711796" target="_blank" rel="noopener noreferrer">X 原帖</a>；<a href="https://dailygram.me/x/aleabitoreddit" target="_blank" rel="noopener noreferrer">DailyGram 公开聚合页</a></div>
+          <div>与 Hesai 的相关性</div><div>间接相关。强化“物理 AI / humanoid”投资叙事，但没有直接触及 Hesai。</div>
+        </div>
+      </div>
+
+      <div class="post">
+        <h3>Reddit 结果</h3>
+        <div class="note">
+          过去 24 小时内未发现可高可信确认的、明确涉及 HESAI / HSAI 的 Reddit 热门公开讨论。需要特别说明：本次尝试直接访问 Reddit 搜索接口时，站点返回了阻断页，因此这里不能把“未检出”解读成“绝对无人讨论”。
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>市场关注重点总结</h2>
+      <ul class="list">
+        <li>投资者更关注的是 humanoid 商业化速度、机器人替代劳动力、AI 基础设施扩张，而不是单一激光雷达公司。</li>
+        <li>“物理 AI”相关叙事有升温迹象，尤其是把 LLM 能力跃迁类比到 humanoid 迭代速度。</li>
+        <li>与 Hesai 相关的机会：若市场继续交易“机器人 / 自动驾驶 / 感知链”大主题，车载与感知硬件可能间接受益。</li>
+        <li>与 Hesai 相关的风险：当前公开讨论未把 Hesai 单独拎出来，说明资金注意力可能仍集中在更上游、更高弹性的 broad AI 叙事。</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Keith Bradsher 报道追踪</h2>
+      <div class="note">
+        过去 24 小时内未发现 Keith Bradsher 新发表报道。
+      </div>
+      <div class="kv" style="margin-top:12px;">
+        <div>核验依据</div><div><a href="https://www.nytimes.com/by/keith-bradsher" target="_blank" rel="noopener noreferrer">The New York Times 作者页</a> 可见最新署名文章日期为 2026-07-02，未进入本次 24 小时窗口。</div>
+        <div>对 Hesai 的潜在影响</div><div>暂无新增记者报道触发的新风险或新催化。</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>@aleabitoreddit 言论追踪</h2>
+      <p class="muted">已确认该账号在过去 24 小时内多次发帖；此前漏检的主因是 X 原生检索索引不稳定，因此本次增加了公开聚合页兜底核验。</p>
+      <ul class="list">
+        <li>确认落在窗口内的公开帖子至少 3 条。</li>
+        <li>主题集中在 humanoid、机器人替代劳动力、AI 基础设施。</li>
+        <li>未发现直接点名 Hesai / HESAI / HSAI 的新增帖子。</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>附录</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>搜索关键词</h3>
+          <p class="small">Hesai / HESAI / HSAI / 禾赛科技 / physical AI / AI stocks / robotics AI / autonomous driving AI / lidar / from:aleabitoreddit / Keith Bradsher</p>
+        </div>
+        <div class="card">
+          <h3>数据来源</h3>
+          <p class="small">
+            <a href="https://x.com/aleabitoreddit/status/2073351980131754203" target="_blank" rel="noopener noreferrer">X status 2073351980131754203</a><br>
+            <a href="https://x.com/aleabitoreddit/status/2073305375957541013" target="_blank" rel="noopener noreferrer">X status 2073305375957541013</a><br>
+            <a href="https://x.com/aleabitoreddit/status/2073196939785711796" target="_blank" rel="noopener noreferrer">X status 2073196939785711796</a><br>
+            <a href="https://dailygram.me/x/aleabitoreddit" target="_blank" rel="noopener noreferrer">DailyGram: @aleabitoreddit</a><br>
+            <a href="https://www.nytimes.com/by/keith-bradsher" target="_blank" rel="noopener noreferrer">NYT: Keith Bradsher 作者页</a>
+          </p>
+        </div>
+      </div>
+      <div class="note" style="margin-top:12px;">
+        未覆盖或访问受限说明：1）当前环境里的 in-app browser 不可用，无法像人工一样直接滚动 X 时间线；2）Reddit 搜索接口被站点策略拦截；3）X 搜索引擎索引对新帖不稳定，因此报告已明确采用公开聚合页做兜底，时间与内容以平台或聚合页显示为准。
+      </div>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日舆情监测归档</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --panel: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #dbe2ea;
+      --accent: #0f766e;
+      --accent-bg: #f0fdfa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 16px 48px;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+    }
+    h1, h2, p, ul { margin: 0; }
+    h1 { font-size: 30px; margin-bottom: 8px; }
+    h2 { font-size: 18px; margin-bottom: 12px; }
+    p { margin-top: 10px; }
+    .meta {
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .notice {
+      margin-top: 16px;
+      padding: 12px 14px;
+      background: var(--accent-bg);
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+    }
+    ul {
+      padding-left: 20px;
+      margin-top: 12px;
+    }
+    li + li { margin-top: 8px; }
+    a {
+      color: #0f5cc0;
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="panel">
+      <h1>每日舆情监测</h1>
+      <div class="meta">静态归档入口</div>
+      <p>请选择日期进入对应的每日简报归档页面。</p>
+      <h2>归档列表</h2>
+      <ul>
+        <li><a href="./2026-07-05/">2026-07-05</a></li>
+        <li><a href="./2026-07-04/">2026-07-04</a></li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
