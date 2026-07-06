@@ -358,25 +358,26 @@ from:aleabitoreddit
 - 根目录页只展示可点击的日期列表，由用户自行进入对应日期目录。
 - 当新增某一天的简报后，应同步更新根目录 `index.html` 中的日期列表。
 
-## Netlify 部署规则
+## GitHub Pages 部署规则
 
-- 每次完成修改后，都要将当前静态站点重新部署到 Netlify。
-- 本项目固定部署到 Netlify project：`hesai-daily-sentiment-monitor`。
-- 不要按日期创建新的 Netlify project，不要为每日简报重复新建站点。
-- 默认在项目根目录执行部署，发布目录为 `.`。
-- 如果当前目录已经 link 到目标 Netlify project `hesai-daily-sentiment-monitor`，直接执行：
+- 本项目固定部署到 GitHub repo：`sunwu51/hesai-daily-sentiment-monitor`。
+- 不要按日期创建新的 GitHub repo，不要为每日简报重复新建站点。
+- 页面部署平台固定为 GitHub Pages。
+- GitHub Pages 站点地址固定为：
 
 ```text
-netlify deploy --prod --dir . --no-build
+https://sunwu51.github.io/hesai-daily-sentiment-monitor/
 ```
 
-- 如果本地 link 丢失，应重新 link 到既有项目 `hesai-daily-sentiment-monitor`，而不是新建别的项目。
-- 交付给用户时，除本地文件路径外，还要附上最新可访问的 Netlify 页面链接。
+- 部署由 GitHub Actions 工作流 `.github/workflows/pages.yml` 负责触发和发布。
+- 如无特殊说明，所有可发布内容都应通过提交到 `main` 分支并 push 到远端来触发部署。
+- 如果本地 Git remote 丢失，应重新连接到既有仓库 `https://github.com/sunwu51/hesai-daily-sentiment-monitor.git`，而不是新建别的 repo。
+- 交付给用户时，除本地文件路径外，还要附上最新可访问的 GitHub Pages 链接。
 
 ## Git 提交规则
 
 - 当前目录是 Git 项目，每次修改完成后都需要提交改动。
-- 完成内容修改后，先执行 Netlify 部署，再执行 Git commit。
+- 完成内容修改后，执行 Git commit，并 push 到 `main` 分支触发 GitHub Pages 部署。
 - commit 信息应简洁明确，能够说明本次更新内容。
 - 除非用户明确要求，不要改写历史，不要删除已有 commit。
 
