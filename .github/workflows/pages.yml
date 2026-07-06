@@ -27,10 +27,15 @@ jobs:
 
       - name: Build static artifact
         run: |
+          shopt -s nullglob
           rm -rf _site
           mkdir -p _site
           cp index.html _site/index.html
-          find . -maxdepth 1 -type d -regex './[0-9]{4}-[0-9]{2}-[0-9]{2}' -exec cp -R {} _site/ \;
+          for dir in [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]; do
+            if [ -d "$dir" ]; then
+              cp -R "$dir" _site/
+            fi
+          done
           touch _site/.nojekyll
 
       - name: Upload artifact
