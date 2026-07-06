@@ -1,2 +1,7 @@
-# Local Netlify folder
+# Local deployment and tooling state
 .netlify
+.agents
+skills-lock.json
+
+# Build output for GitHub Pages workflow
+_site
