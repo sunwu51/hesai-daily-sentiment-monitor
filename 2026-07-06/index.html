@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日舆情监测简报 - 2026-07-06</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f3f6fb;
+      --panel: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #d8e0ea;
+      --accent: #0f766e;
+      --accent-bg: #ecfeff;
+      --focus: #9a3412;
+      --focus-bg: #fff7ed;
+      --warn: #92400e;
+      --warn-bg: #fef3c7;
+      --bad: #991b1b;
+      --bad-bg: #fef2f2;
+      --soft: #eef2ff;
+      --soft-text: #3730a3;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 14px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: #0f5cc0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+    .hero, .section, .card, .table-wrap {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .hero, .section, .table-wrap { padding: 20px; margin-bottom: 16px; }
+    .card { padding: 14px; }
+    h1, h2, h3, p, ul, table { margin: 0; }
+    h1 { font-size: 29px; margin-bottom: 10px; }
+    h2 { font-size: 19px; margin-bottom: 14px; }
+    h3 { font-size: 15px; margin-bottom: 8px; }
+    .meta {
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+    }
+    .overview {
+      margin-top: 14px;
+      padding: 12px 14px;
+      background: var(--accent-bg);
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .list { padding-left: 18px; }
+    .list li + li { margin-top: 8px; }
+    .muted { color: var(--muted); }
+    .small { font-size: 12px; }
+    .tag, .tag-focus, .tag-warn, .tag-bad, .tag-soft {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-right: 6px;
+    }
+    .tag { background: #ecfeff; color: #155e75; }
+    .tag-focus { background: var(--focus-bg); color: var(--focus); }
+    .tag-warn { background: var(--warn-bg); color: var(--warn); }
+    .tag-bad { background: var(--bad-bg); color: var(--bad); }
+    .tag-soft { background: var(--soft); color: var(--soft-text); }
+    .post {
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+      margin-top: 14px;
+    }
+    .post:first-child {
+      border-top: 0;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .kv {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 8px 12px;
+      margin-top: 10px;
+    }
+    .kv div:nth-child(odd) {
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .note {
+      margin-top: 10px;
+      padding: 10px 12px;
+      background: #f8fafc;
+      border-radius: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 10px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      color: var(--muted);
+      font-weight: 600;
+      border-top: 0;
+    }
+    code {
+      background: #eff6ff;
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+    @media (max-width: 860px) {
+      .grid, .grid-3 { grid-template-columns: 1fr; }
+      .kv { grid-template-columns: 1fr; gap: 4px; }
+      table, thead, tbody, tr, th, td { display: block; }
+      th { padding-bottom: 0; }
+      td { border-top: 0; padding-top: 4px; }
+      tr { border-top: 1px solid var(--line); padding: 8px 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>每日舆情监测简报</h1>
+      <div class="meta">
+        <span>生成时间：2026-07-06 08:02:14 CST（Asia/Shanghai）</span>
+        <span>监测窗口：2026-07-05 08:02:14 CST 至 2026-07-06 08:02:14 CST</span>
+        <span>主题：物理 AI、AI 股票、机器人 / 自动驾驶 / 激光雷达、Hesai / HESAI / HSAI / 禾赛科技</span>
+      </div>
+      <div class="overview">
+        一句话总览：过去 24 小时内，公开可核验讨论仍以 broad AI / 机器人 / 算力叙事为主；未发现新的高可信 HESAI 热门讨论，<strong>@aleabitoreddit</strong> 可确认有 1 条新帖，但内容不直接涉及 Hesai。
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>执行摘要</h2>
+      <ul class="list">
+        <li><span class="tag-bad">HESAI 重点讨论：未发现</span> 本次未在可公开核验的 X 搜索结果、Reddit 目标子版块结果中抓到过去 24 小时内新的 HESAI / HSAI 高互动讨论。</li>
+        <li><span class="tag">发现 @aleabitoreddit 新帖</span> 可确认的新帖为 7 月 5 日关于 Anthropic 在澳大利亚电力 / 数据中心规划的评论，对 Hesai 仅属间接相关。</li>
+        <li>DailyGram 对 7 月 4 日多条旧近帖只显示日期、不显示具体时分；这些帖子处于 24 小时边界，未作为“已确认落入本窗口”的样本纳入正文结论。</li>
+        <li>Reddit 搜索命中仍以数周至数月前旧帖为主；<code>r/stocks</code>、<code>r/investing</code>、<code>r/wallstreetbets</code>、<code>r/ChinaStocks</code> 未见 24 小时内新增 HESAI 热帖。</li>
+        <li>重点记者名单已按媒体官网、作者页、搜索引擎和新闻索引做批量核验；过去 24 小时内未发现与 Hesai 相关性较高的新报道。</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>X 与 Reddit 舆情</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>X 平台</h3>
+          <p class="muted">可公开核验到的新增内容主要来自 <strong>@aleabitoreddit</strong>；未见新的 HESAI 定向高互动讨论。X 原帖正文自动化读取不稳定，因此正文以 DailyGram 索引摘要和 X 原帖链接交叉核验。</p>
+        </div>
+        <div class="card">
+          <h3>Reddit 平台</h3>
+          <p class="muted">目标子版块搜索命中主要是旧帖，如 <code>r/ChinaStocks</code> 中 5 个月前的 Hesai 主题帖、<code>r/stocks</code> 中上月提及 Hesai 的个股讨论，并非过去 24 小时新增。</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <h3>@aleabitoreddit - Anthropic 在澳大利亚的电力规划</h3>
+        <div class="kv">
+          <div>平台</div><div>X</div>
+          <div>作者 / 账号</div><div>@aleabitoreddit</div>
+          <div>发布时间</div><div>2026-07-05（DailyGram 页面显示；时间以平台显示为准）</div>
+          <div>原文摘录</div><div>Leaked documents reveal Anthropic's plans to secure 1.4GW of energy capacity in Australia, valued at $21.6 billion... signaling strategic industry shifts.</div>
+          <div>中文直译</div><div>泄露文件显示，Anthropic 计划在澳大利亚锁定 1.4GW 的电力容量，价值 216 亿美元……这表明行业正在发生战略性转变。</div>
+          <div>链接</div><div><a href="https://x.com/aleabitoreddit/status/2073704784398528599" target="_blank" rel="noopener noreferrer">X 原帖</a> | <a href="https://dailygram.me/x/aleabitoreddit" target="_blank" rel="noopener noreferrer">DailyGram 聚合页</a></div>
+          <div>与 Hesai 的相关性</div><div>低。更偏 AI 基础设施和主权算力部署，不直接映射到激光雷达链条。</div>
+        </div>
+      </div>
+
+      <div class="post">
+        <h3>Reddit 目标子版块检查结果</h3>
+        <div class="kv">
+          <div>检索范围</div><div><code>r/stocks</code>、<code>r/investing</code>、<code>r/wallstreetbets</code>、<code>r/ChinaStocks</code></div>
+          <div>关键词</div><div><code>HESAI</code>、<code>HSAI</code>、<code>"physical AI"</code>、<code>lidar</code></div>
+          <div>结果概览</div><div>可见命中包括 <code>r/stocks</code> 上月个股征集帖内提及 Hesai、<code>r/ChinaStocks</code> 5 个月前的 “China Robot trade” 旧帖、<code>r/wallstreetbets</code> 1 年前的 lidar 讨论帖。</div>
+          <div>结论</div><div>过去 24 小时内未发现高可信公开讨论；当前可见结果更像历史帖子残留，而非新增热度。</div>
+          <div>与 Hesai 的相关性</div><div>无新增明确信号；公开投资者讨论仍未把 Hesai 单独推成当日热点。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>市场关注重点总结</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>投资者正在关注什么</h3>
+          <ul class="list">
+            <li>主权算力与能源供给是否成为 AI 新瓶颈</li>
+            <li>humanoid / 物理 AI 的商业化节奏</li>
+            <li>机器人和自动化对传统岗位的替代速度</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>哪些主题在升温 / 降温</h3>
+          <ul class="list">
+            <li>升温：AI 基础设施与能源约束叙事</li>
+            <li>升温：Physical AI / 机器人长期空间</li>
+            <li>降温：对单一激光雷达公司点名讨论热度仍低</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>对 Hesai 的机会 / 风险</h3>
+          <ul class="list">
+            <li>机会：物理 AI 大叙事若持续扩散，感知硬件会被重新关注</li>
+            <li>风险：过去 24 小时缺少 Hesai 自身新增催化，关注度仍偏 broad AI</li>
+            <li>风险：若市场继续追算力和能源，激光雷达链条可能被边缘化</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>重点媒体与记者报道追踪</h2>
+      <p class="muted">结果口径：以下作者均已按媒体站点、作者页、搜索引擎结果和公开新闻索引做检索；过去 24 小时内未发现“新发表且与 Hesai 相关性较高”的报道。如有作者出现新作但主题与 Hesai 无明显关联，也记为“未发现相关新报道”。</p>
+      <div class="table-wrap" style="margin-top: 14px;">
+        <table>
+          <thead>
+            <tr>
+              <th>媒体 / 作者</th>
+              <th>结果</th>
+              <th>重点信息</th>
+              <th>对 Hesai 的影响</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>BBC / Stephen McDonell</td><td>未发现相关新报道</td><td>检索 BBC 与公开搜索结果，未见过去 24 小时内与中国汽车 / 机器人 / 激光雷达直接相关、且可映射 Hesai 的新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Bloomberg News / Linda Lew</td><td>未发现相关新报道</td><td>未见过去 24 小时内与 Hesai 关联度高的新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Charlton Media / Gwyneth Bejer</td><td>未发现相关新报道</td><td>未见过去 24 小时内与 Hesai 相关的新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Financial Times / Gloria Li</td><td>未发现相关新报道</td><td>未见过去 24 小时内与中国科技出海 / 自动驾驶链条直接映射 Hesai 的新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Financial Times / Edward White</td><td>未发现相关新报道</td><td>未见过去 24 小时内与 Hesai 相关度高的新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Financial Times / Robin Harding</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Financial Times / Eleanor Olcott</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Frankfurter Allgemeine / Gustav Theile</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>New York Times / Keith Bradsher</td><td>未发现相关新报道</td><td>搜索结果未见过去 24 小时内与中国汽车 / 自动驾驶链条并能映射 Hesai 的新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Nikkei Asia / Wataru Suzuki</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Wall Street Journal / Jonathan Cheng</td><td>未发现相关新报道</td><td>未见过去 24 小时内与 Hesai 关联度高的新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Wall Street Journal / Jiahui Huang</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Acumen Media / Josh Wasington / Josh Washington</td><td>未发现相关新报道</td><td>按两种拼写均检索，未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Auto Haus / Wilfried Boehler</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Autoambition / Niklas Kurz</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Automotive News / Molly Boigon</td><td>未发现相关新报道</td><td>未见过去 24 小时内与自动驾驶 / 传感器链条直接相关、且能映射 Hesai 的新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Automotive News / Pete Bigelow</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Automotive News / Jamie Butters</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Automotive News / Hans Greimel</td><td>未发现相关新报道</td><td>未见过去 24 小时内与中国车企供应链直接映射 Hesai 的新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Automotive News / John Irwin</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Automotive News / Lindsay VanHulle</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Automotive News / Laurence Iliff</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Automotive News Europe / Doug Boulduc / Doug Bolduc</td><td>未发现相关新报道</td><td>按两种拼写均检索，未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Automotive News Europe / Lois Jones</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>CNBC / Paige Tortelli</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Der Spiegel / Arvid Haitsch</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Forbes / Sabbir Rangwala</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Forbes / Sam Abuelsamid</td><td>未发现相关新报道</td><td>未见过去 24 小时内与自动驾驶 / lidar 可映射 Hesai 的新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Frankfurter Allgemeine Zeitung / Tobias Piller</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Futurride / Kevin Jost</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Motor1.com / Massimo Grassi</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>MT Newswires / Khushi Mandowara</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>New York Times / Melissa Eddy</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Nikkei / Eiki Hayashi</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>Reuters / Abhirup Roy</td><td>未发现相关新报道</td><td>过去 24 小时内未见新的 Reuters 稿件直接涉及 Hesai、lidar 供应链或中国自动驾驶出海风险。</td><td>无直接影响</td></tr>
+            <tr><td>Reuters / Nick Carey</td><td>未发现相关新报道</td><td>过去 24 小时内未见直接映射 Hesai 的 Reuters 新稿。</td><td>无直接影响</td></tr>
+            <tr><td>TechCrunch / Kirsten Korosec</td><td>未发现相关新报道</td><td>可见页面未显示过去 24 小时内新的自动驾驶 / lidar 稿件。</td><td>无直接影响</td></tr>
+            <tr><td>TechCrunch / Rebecca Bellan</td><td>未发现相关新报道</td><td>可见页面未显示过去 24 小时内新的自动驾驶 / lidar 稿件。</td><td>无直接影响</td></tr>
+            <tr><td>TechCrunch / Sean O'Kane</td><td>未发现相关新报道</td><td>作者页可见最近相关稿件早于本监测窗口。</td><td>无直接影响</td></tr>
+            <tr><td>The Detroit News / Brena Noble</td><td>未发现相关新报道</td><td>按 “Detriot / Detroit” 两种写法检索，未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>The Glass Alamac / The Glass Almanac / Brian Foster</td><td>未发现相关新报道</td><td>按两种媒体拼写均检索，未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>The Information / Steve LeVine</td><td>未发现相关新报道</td><td>未见过去 24 小时内与 Hesai 关联度高的新稿。</td><td>无直接影响</td></tr>
+            <tr><td>The Robot Report / Brianna Wessling</td><td>未发现相关新报道</td><td>未见过去 24 小时内可直接映射 Hesai 的机器人新稿。</td><td>无直接影响</td></tr>
+            <tr><td>The Robot Report / Mike Oitzman</td><td>未发现相关新报道</td><td>未见过去 24 小时内可直接映射 Hesai 的机器人新稿。</td><td>无直接影响</td></tr>
+            <tr><td>The Wall Street Journal / Eric Bellman</td><td>未发现相关新报道</td><td>未见过去 24 小时内相关新稿。</td><td>无直接影响</td></tr>
+            <tr><td>The Washington Post Intelligence / Jason Dean</td><td>未发现相关新报道</td><td>未见过去 24 小时内与中国科技 / 汽车供应链直接映射 Hesai 的新稿。</td><td>无直接影响</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note">
+        结论：过去 24 小时内未发现上述重点记者新发表、且与 Hesai 相关性较高的报道。
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>@aleabitoreddit 言论追踪</h2>
+      <div class="post">
+        <h3>已确认落入本监测窗口的公开发言</h3>
+        <div class="kv">
+          <div>发布时间</div><div>2026-07-05（时间以平台显示为准）</div>
+          <div>原文</div><div>Leaked documents reveal Anthropic's plans to secure 1.4GW of energy capacity in Australia, valued at $21.6 billion...</div>
+          <div>中文直译</div><div>泄露文件显示，Anthropic 计划在澳大利亚锁定 1.4GW 的电力容量，价值 216 亿美元……</div>
+          <div>链接</div><div><a href="https://x.com/aleabitoreddit/status/2073704784398528599" target="_blank" rel="noopener noreferrer">X 原帖</a> | <a href="https://dailygram.me/x/aleabitoreddit" target="_blank" rel="noopener noreferrer">DailyGram 聚合页</a></div>
+          <div>可能对 Hesai 的影响</div><div>低；偏算力基础设施，不直接作用于 lidar 情绪。</div>
+        </div>
+      </div>
+      <div class="note">
+        DailyGram 同页还展示了 2026-07-04 的多条帖子，但未提供具体时分，无法精确判断是否位于 24 小时窗口内，因此仅在附注中保留，不纳入已确认样本。
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>附录</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>搜索关键词</h3>
+          <ul class="list">
+            <li><code>site:reddit.com/r/stocks HESAI OR HSAI</code></li>
+            <li><code>site:reddit.com/r/investing HESAI OR HSAI</code></li>
+            <li><code>site:reddit.com/r/wallstreetbets lidar OR HESAI</code></li>
+            <li><code>site:reddit.com/r/ChinaStocks HESAI OR "physical AI"</code></li>
+            <li><code>site:x.com HESAI OR HSAI OR Hesai</code></li>
+            <li><code>site:dailygram.me/x/aleabitoreddit</code></li>
+            <li><code>记者姓名 + 媒体名 + China / robot / lidar / autonomous / AI</code></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>数据来源与访问限制</h3>
+          <ul class="list">
+            <li>主要来源：DailyGram、X 链接壳页、Reddit 公开索引页、媒体官网 / 作者页、公开搜索结果。</li>
+            <li>本次自动化环境未暴露可用的 Chrome 会话控制接口，因此未能按常规在独立 Chrome 任务标签页中复核 Reddit / X 动态页面。</li>
+            <li>X 原帖正文读取稳定性较差；正文与时间以公开索引页和平台显示为准。</li>
+            <li>部分媒体站点存在 robots / 付费墙限制，故优先采用站点公开作者页与搜索结果核验。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
