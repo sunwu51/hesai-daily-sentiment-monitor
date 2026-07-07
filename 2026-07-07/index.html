@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日舆情监测简报 - 2026-07-07</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f3f6fb;
+      --panel: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #d8e0ea;
+      --accent: #0f766e;
+      --accent-bg: #ecfeff;
+      --focus: #9a3412;
+      --focus-bg: #fff7ed;
+      --warn: #92400e;
+      --warn-bg: #fef3c7;
+      --bad: #991b1b;
+      --bad-bg: #fef2f2;
+      --soft: #eef2ff;
+      --soft-text: #3730a3;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 14px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: #0f5cc0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+    .hero, .section, .card, .table-wrap {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .hero, .section, .table-wrap { padding: 20px; margin-bottom: 16px; }
+    .card { padding: 14px; }
+    h1, h2, h3, p, ul, table { margin: 0; }
+    h1 { font-size: 29px; margin-bottom: 10px; }
+    h2 { font-size: 19px; margin-bottom: 14px; }
+    h3 { font-size: 15px; margin-bottom: 8px; }
+    .meta {
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+    }
+    .overview {
+      margin-top: 14px;
+      padding: 12px 14px;
+      background: var(--accent-bg);
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .list { padding-left: 18px; }
+    .list li + li { margin-top: 8px; }
+    .muted { color: var(--muted); }
+    .small { font-size: 12px; }
+    .tag, .tag-focus, .tag-warn, .tag-bad, .tag-soft {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-right: 6px;
+    }
+    .tag { background: #ecfeff; color: #155e75; }
+    .tag-focus { background: var(--focus-bg); color: var(--focus); }
+    .tag-warn { background: var(--warn-bg); color: var(--warn); }
+    .tag-bad { background: var(--bad-bg); color: var(--bad); }
+    .tag-soft { background: var(--soft); color: var(--soft-text); }
+    .post {
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+      margin-top: 14px;
+    }
+    .post:first-child {
+      border-top: 0;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .kv {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 8px 12px;
+      margin-top: 10px;
+    }
+    .kv div:nth-child(odd) {
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .note {
+      margin-top: 10px;
+      padding: 10px 12px;
+      background: #f8fafc;
+      border-radius: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 10px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      color: var(--muted);
+      font-weight: 600;
+      border-top: 0;
+    }
+    code {
+      background: #eff6ff;
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+    @media (max-width: 860px) {
+      .grid, .grid-3 { grid-template-columns: 1fr; }
+      .kv { grid-template-columns: 1fr; gap: 4px; }
+      table, thead, tbody, tr, th, td { display: block; }
+      th { padding-bottom: 0; }
+      td { border-top: 0; padding-top: 4px; }
+      tr { border-top: 1px solid var(--line); padding: 8px 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>每日舆情监测简报</h1>
+      <div class="meta">
+        <span>生成时间：2026-07-07 08:03:34 CST（Asia/Shanghai）</span>
+        <span>监测窗口：2026-07-06 08:03:34 CST 至 2026-07-07 08:03:34 CST</span>
+        <span>主题：物理 AI、AI 股票、机器人 / 自动驾驶 / 激光雷达、Hesai / HESAI / HSAI / 禾赛科技</span>
+      </div>
+      <div class="overview">
+        一句话总览：过去 24 小时内，公开可核验讨论继续偏向 humanoid / Physical AI 与 AI 估值，未抓到新的高可信 HESAI 热门帖；<strong>@aleabitoreddit</strong> 过去数小时有多条新帖，但都未直接点名 Hesai。
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>执行摘要</h2>
+      <ul class="list">
+        <li><span class="tag-bad">HESAI 重点讨论：未发现</span> X 搜索 <code>HESAI OR HSAI</code> 未抓到可稳定读取的新帖，Reddit 目标子版块检索也未见过去 24 小时内新增 HESAI / HSAI 高互动讨论。</li>
+        <li><span class="tag-focus">Physical AI 热度仍在</span> <strong>@aleabitoreddit</strong> 连续讨论 humanoid、Physical AI 估值与 SPAC 上市路径，说明市场兴趣仍集中在 broad physical AI 叙事，而不是单一激光雷达标的。</li>
+        <li>X 自动化读取已处于登录态，但动态页面正文抓取仍有不稳定情况；本页对 X 结论仅采用可见页面文本与原帖链接可交叉核验的内容。</li>
+        <li>对重点记者名单做了批量搜索与站点核验，过去 24 小时内未发现“新发表且与 Hesai 相关性较高”的报道。</li>
+        <li>对 Hesai 的直接影响仍偏间接：行业关注点在机器人资本开支、估值锚和 AI 基础设施，激光雷达链条没有单独成为当日情绪核心。</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>X 与 Reddit 舆情</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>X 平台</h3>
+          <p class="muted">本轮可核验新增内容主要来自 <strong>@aleabitoreddit</strong> 的 live 搜索页。对 <code>HESAI OR HSAI</code> 的 X 搜索未抓到稳定可读的新结果，因此未把任何 HESAI 帖子写成已确认事实。</p>
+        </div>
+        <div class="card">
+          <h3>Reddit 平台</h3>
+          <p class="muted">按 <code>r/stocks</code>、<code>r/investing</code>、<code>r/wallstreetbets</code>、<code>r/ChinaStocks</code> 加上 <code>HESAI</code>、<code>HSAI</code>、<code>physical AI</code>、<code>lidar</code> 做搜索，命中仍以旧帖为主，过去 24 小时内未发现高可信公开讨论。</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <h3>@aleabitoreddit：Physical AI 资本流入仍在高位</h3>
+        <div class="kv">
+          <div>平台</div><div>X</div>
+          <div>作者 / 账号</div><div>@aleabitoreddit</div>
+          <div>发布时间</div><div>约 4 小时前（X 页面显示；时间以平台显示为准）</div>
+          <div>原文摘录</div><div>Clearly not true, capital inflow for humanoid + Physical AI is ATHs from VC data... the SPAC structure is used for faster IPO, in terms of giving retail access to US humanoid companies.</div>
+          <div>中文直译</div><div>这显然不对。根据风投数据，humanoid 和 Physical AI 的资金流入仍处在历史高位……我认为采用 SPAC 结构，是为了更快上市，让散户能接触到美国 humanoid 公司。</div>
+          <div>链接</div><div><a href="https://x.com/aleabitoreddit/status/2074218760593195010" target="_blank" rel="noopener noreferrer">X 原帖</a></div>
+          <div>与 Hesai 的相关性</div><div>中低。说明市场仍把资金和注意力押注在 physical AI 大叙事，对感知硬件是间接利好，但没有点名 Hesai。</div>
+        </div>
+      </div>
+
+      <div class="post">
+        <h3>@aleabitoreddit：Figure / Agility 估值锚仍主导交易叙事</h3>
+        <div class="kv">
+          <div>平台</div><div>X</div>
+          <div>作者 / 账号</div><div>@aleabitoreddit</div>
+          <div>发布时间</div><div>约 4 小时前（X 页面显示；时间以平台显示为准）</div>
+          <div>原文摘录</div><div>It’s interesting to witness psychology around valuation anchoring + scarcity... Retail, for example, are buying Figure... Then Agility Robotics, which has broader commercialization.</div>
+          <div>中文直译</div><div>围绕估值锚定和稀缺性的心理变化很有意思……例如，散户正在买 Figure……然后是商业化更广的 Agility Robotics。</div>
+          <div>链接</div><div><a href="https://x.com/aleabitoreddit/status/2074214669808717906" target="_blank" rel="noopener noreferrer">X 原帖</a></div>
+          <div>与 Hesai 的相关性</div><div>低。讨论核心是 humanoid 估值稀缺性，不是自动驾驶或激光雷达链条。</div>
+        </div>
+      </div>
+
+      <div class="post">
+        <h3>Reddit 目标子版块检查结果</h3>
+        <div class="kv">
+          <div>检索范围</div><div><code>r/stocks</code>、<code>r/investing</code>、<code>r/wallstreetbets</code>、<code>r/ChinaStocks</code></div>
+          <div>关键词</div><div><code>HESAI</code>、<code>HSAI</code>、<code>physical AI</code>、<code>AI stocks</code>、<code>lidar</code></div>
+          <div>结果概览</div><div>公开搜索结果主要回落到数周至数月前的旧帖，没有出现过去 24 小时内的新 HESAI 讨论或高互动 physical AI / lidar 股票帖。</div>
+          <div>原文摘录</div><div>过去 24 小时内未发现高可信公开讨论。</div>
+          <div>中文直译</div><div>无新增可核验样本，因此不做具体帖子摘录。</div>
+          <div>链接</div><div>以公开搜索结果页和原始 Reddit 结果为准。</div>
+          <div>与 Hesai 的相关性</div><div>无新增信号；Hesai 仍未在 Reddit 成为当日独立热点。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>市场关注重点总结</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>投资者正在关注什么</h3>
+          <ul class="list">
+            <li>humanoid / Physical AI 的估值锚与 IPO 路径</li>
+            <li>VC 资金流是否继续涌向机器人和自动化</li>
+            <li>AI 交易是否继续偏向大叙事而非零部件公司</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>哪些主题在升温 / 降温</h3>
+          <ul class="list">
+            <li>升温：humanoid、Physical AI、SPAC 上市讨论</li>
+            <li>升温：估值锚定与“稀缺资产”叙事</li>
+            <li>降温：单一 lidar / HESAI 点名讨论热度</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>对 Hesai 的机会 / 风险</h3>
+          <ul class="list">
+            <li>机会：physical AI 关注度延续，感知链条有被重新讨论的基础</li>
+            <li>风险：市场焦点仍在机器人本体和融资，Hesai 缺少当日直接催化</li>
+            <li>风险：若资金继续集中在 broad AI 估值故事，激光雷达板块可能继续边缘化</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>重点媒体与记者报道追踪</h2>
+      <p class="muted">检索口径：按 AGENTS.MD 中完整名单做了搜索引擎、媒体站点和作者名批量核验，并对常见别名拼写一并搜索。过去 24 小时内未发现上述重点记者新发表、且与 Hesai 相关性较高的报道。</p>
+      <div class="table-wrap" style="margin-top: 14px;">
+        <table>
+          <thead>
+            <tr>
+              <th>覆盖分组</th>
+              <th>作者</th>
+              <th>结果</th>
+              <th>对 Hesai 的影响</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>主流国际媒体</td>
+              <td>Stephen McDonell、Linda Lew、Gloria Li、Edward White、Robin Harding、Eleanor Olcott、Gustav Theile、Keith Bradsher、Melissa Eddy、Wataru Suzuki、Eiki Hayashi</td>
+              <td>未发现过去 24 小时内与中国汽车、自动驾驶、机器人或激光雷达链条直接映射 Hesai 的新报道。</td>
+              <td>无直接影响</td>
+            </tr>
+            <tr>
+              <td>财经与通讯社</td>
+              <td>Jonathan Cheng、Jiahui Huang、Eric Bellman、Abhirup Roy、Nick Carey、Paige Tortelli、Steve LeVine、Khushi Mandowara</td>
+              <td>未发现过去 24 小时内与 Hesai 相关性较高的新稿；若有新稿，也未形成可直接映射到 Hesai 的事件驱动。</td>
+              <td>无直接影响</td>
+            </tr>
+            <tr>
+              <td>科技与机器人</td>
+              <td>Kirsten Korosec、Rebecca Bellan、Sean O'Kane、Brianna Wessling、Mike Oitzman、Sam Abuelsamid、Sabbir Rangwala</td>
+              <td>未发现过去 24 小时内新的 Hesai 高相关稿件。</td>
+              <td>无直接影响</td>
+            </tr>
+            <tr>
+              <td>汽车产业与其余名单</td>
+              <td>Gwyneth Bejer、Josh Wasington / Josh Washington、Wilfried Boehler、Niklas Kurz、Molly Boigon、Pete Bigelow、Jamie Butters、Hans Greimel、John Irwin、Lindsay VanHulle、Laurence Iliff、Doug Boulduc / Doug Bolduc、Lois Jones、Arvid Haitsch、Tobias Piller、Kevin Jost、Massimo Grassi、Brena Noble、Brian Foster、Jason Dean</td>
+              <td>未发现过去 24 小时内“新发表且与 Hesai 相关性较高”的报道。</td>
+              <td>无直接影响</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>@aleabitoreddit 言论追踪</h2>
+      <div class="post">
+        <h3>过去 24 小时概览</h3>
+        <div class="kv">
+          <div>结果</div><div>发现多条新帖 / 回复，主题集中在 <code>RDDT</code>、humanoid、Physical AI 估值、SPAC 与一级市场心理。</div>
+          <div>是否提到 Hesai</div><div>未直接提到 Hesai / HESAI / HSAI。</div>
+          <div>总体影响</div><div>间接。说明资金和散户情绪仍围绕 physical AI 叙事活跃，但尚未外溢到 Hesai 个股讨论。</div>
+          <div>代表链接</div><div><a href="https://x.com/search?q=from%3Aaleabitoreddit&src=typed_query&f=live" target="_blank" rel="noopener noreferrer">X live 搜索页</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>附录</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>搜索关键词</h3>
+          <p class="muted small">Reddit：<code>site:reddit.com/r/stocks HESAI OR HSAI</code>、<code>site:reddit.com/r/investing "physical AI" OR "AI stocks"</code>、<code>site:reddit.com/r/wallstreetbets lidar</code>、<code>site:reddit.com/r/ChinaStocks HESAI</code></p>
+          <p class="muted small" style="margin-top:8px;">X：<code>HESAI OR HSAI</code>、<code>from:aleabitoreddit</code>、<code>"physical AI" stocks</code></p>
+          <p class="muted small" style="margin-top:8px;">记者：按完整名单分组搜索，并补充别名 <code>Josh Washington</code>、<code>Doug Bolduc</code>、<code>The Detroit News</code>、<code>The Glass Almanac</code></p>
+        </div>
+        <div class="card">
+          <h3>数据来源与限制</h3>
+          <ul class="list">
+            <li>X 原始页面、X live 搜索页</li>
+            <li>公开搜索引擎结果页与原始站点链接</li>
+            <li>Reddit 公开索引结果</li>
+            <li>访问限制：X 已处于登录态，但自动化读取页面内容受限；Reddit 搜索结果以公开索引为主，部分站内内容未登录时可见性有限。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
