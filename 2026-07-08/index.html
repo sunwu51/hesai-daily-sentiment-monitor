@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日舆情监测简报 - 2026-07-08</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f3f6fb;
+      --panel: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #d8e0ea;
+      --accent: #0f766e;
+      --accent-bg: #ecfeff;
+      --focus: #9a3412;
+      --focus-bg: #fff7ed;
+      --warn: #92400e;
+      --warn-bg: #fef3c7;
+      --bad: #991b1b;
+      --bad-bg: #fef2f2;
+      --soft: #eef2ff;
+      --soft-text: #3730a3;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 14px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: #0f5cc0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+    .hero, .section, .card, .table-wrap {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .hero, .section, .table-wrap { padding: 20px; margin-bottom: 16px; }
+    .card { padding: 14px; }
+    h1, h2, h3, p, ul, table { margin: 0; }
+    h1 { font-size: 29px; margin-bottom: 10px; }
+    h2 { font-size: 19px; margin-bottom: 14px; }
+    h3 { font-size: 15px; margin-bottom: 8px; }
+    .meta {
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+    }
+    .overview {
+      margin-top: 14px;
+      padding: 12px 14px;
+      background: var(--accent-bg);
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .list { padding-left: 18px; }
+    .list li + li { margin-top: 8px; }
+    .muted { color: var(--muted); }
+    .small { font-size: 12px; }
+    .tag, .tag-focus, .tag-warn, .tag-bad, .tag-soft {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-right: 6px;
+    }
+    .tag { background: #ecfeff; color: #155e75; }
+    .tag-focus { background: var(--focus-bg); color: var(--focus); }
+    .tag-warn { background: var(--warn-bg); color: var(--warn); }
+    .tag-bad { background: var(--bad-bg); color: var(--bad); }
+    .tag-soft { background: var(--soft); color: var(--soft-text); }
+    .post {
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+      margin-top: 14px;
+    }
+    .post:first-child {
+      border-top: 0;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .kv {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 8px 12px;
+      margin-top: 10px;
+    }
+    .kv div:nth-child(odd) {
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .note {
+      margin-top: 10px;
+      padding: 10px 12px;
+      background: #f8fafc;
+      border-radius: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 10px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      color: var(--muted);
+      font-weight: 600;
+      border-top: 0;
+    }
+    code {
+      background: #eff6ff;
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+    @media (max-width: 860px) {
+      .grid, .grid-3 { grid-template-columns: 1fr; }
+      .kv { grid-template-columns: 1fr; gap: 4px; }
+      table, thead, tbody, tr, th, td { display: block; }
+      th { padding-bottom: 0; }
+      td { border-top: 0; padding-top: 4px; }
+      tr { border-top: 1px solid var(--line); padding: 8px 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>每日舆情监测简报</h1>
+      <div class="meta">
+        <span>生成时间：2026-07-08 08:01:52 CST（Asia/Shanghai）</span>
+        <span>监测窗口：2026-07-07 08:01:52 CST 至 2026-07-08 08:01:52 CST</span>
+        <span>主题：物理 AI、AI 股票、机器人 / 自动驾驶 / 激光雷达、Hesai / HESAI / HSAI / 禾赛科技</span>
+      </div>
+      <div class="overview">
+        一句话总览：过去 24 小时里，X 上出现了围绕 <strong>Hesai / HSAI</strong> 的一轮新讨论，焦点从“与 NVIDIA 的合作”延伸到“美国国家安全审查”与“西方激光雷达厂商受益”叙事；Reddit 目标子版块未见新的高可信热门帖。
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>执行摘要</h2>
+      <ul class="list">
+        <li><span class="tag-focus">HESAI 重点讨论：已发现</span> 过去 24 小时内，X 上至少出现多条直接点名 <code>Hesai</code> / <code>HSAI</code> 的公开帖文，内容集中在美国监管与西方 lidar 替代逻辑。</li>
+        <li><span class="tag-focus">【重点：涉及 HESAI】</span> <strong>@aleabitoreddit</strong> 在监测窗口内明确发帖称 Hesai 面临美国国家安全审查，并推演 <code>$OUST</code>、<code>$AEVA</code> 可能因此受益。</li>
+        <li>X 上围绕 Hesai 的新增互动并非一致看空：既有“监管风险利好西方对手”的表述，也有“美国业务敞口有限、供应链能力强”的反驳声音。</li>
+        <li>Reddit 在 <code>r/stocks</code>、<code>r/investing</code>、<code>r/wallstreetbets</code>、<code>r/ChinaStocks</code> 的公开检索结果仍以旧帖或转贴为主，未发现过去 24 小时内的新高可信热门讨论。</li>
+        <li>按 AGENTS.MD 中完整记者名单及常见别名做近 24 小时批量检索，未核验到“新发表且与 Hesai 相关性较高”的重点记者原创报道。</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>X 与 Reddit 舆情</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>X 平台</h3>
+          <p class="muted">本轮新增样本主要来自 X live 搜索页及原帖链接核验。Chrome 中 X 已处于登录态，但自动化读取动态页面仍有局部受限，因此以下时间与正文以页面可见内容为准。</p>
+        </div>
+        <div class="card">
+          <h3>Reddit 平台</h3>
+          <p class="muted">按目标子版块加 <code>HESAI</code>、<code>HSAI</code>、<code>physical AI</code>、<code>AI stocks</code>、<code>lidar</code> 做公开检索，过去 24 小时内未找到可稳定核验的新热门帖。</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <h3>【重点：涉及 HESAI】@aleabitoreddit：Hesai 面临美国国家安全审查</h3>
+        <div class="kv">
+          <div>平台</div><div>X</div>
+          <div>作者 / 账号</div><div>@aleabitoreddit</div>
+          <div>发布时间</div><div>2026-07-08 03:49:55 CST（X 页面时间换算）</div>
+          <div>原文摘录</div><div>Hesai Technology, a Chinese lidar maker faces US national scrutiny over its expanded partnership with $NVDA and lidar sensors. For $OUST, $AEVA, and Western lidar bros, this is generally positive if competitors get regulated out.</div>
+          <div>中文直译</div><div>中国激光雷达制造商 Hesai Technology 因其扩大的英伟达合作和激光雷达传感器业务而面临美国国家安全审查。对 <code>$OUST</code>、<code>$AEVA</code> 以及西方激光雷达玩家来说，如果竞争对手被监管挤出，这总体上是利好的。</div>
+          <div>链接</div><div><a href="https://x.com/aleabitoreddit/status/2074581698604593367" target="_blank" rel="noopener noreferrer">X 原帖</a></div>
+          <div>与 Hesai 的相关性</div><div>高。直接点名 Hesai，并把监管风险映射为竞争格局变化。</div>
+        </div>
+      </div>
+
+      <div class="post">
+        <h3>【重点：涉及 HESAI】市场回应：HSAI 的美国业务敞口有限</h3>
+        <div class="kv">
+          <div>平台</div><div>X</div>
+          <div>作者 / 账号</div><div>@peonyKingOF</div>
+          <div>发布时间</div><div>2026-07-08 08:00:14 CST（X 页面时间换算）</div>
+          <div>原文摘录</div><div>Total FUD. $HSAI has maybe mid-single digit US exposure... Years ago it was around 10% and falling like a rock.</div>
+          <div>中文直译</div><div>完全是恐慌性叙事。<code>$HSAI</code> 在美国的业务敞口大概只有中个位数百分比……几年前大约是 10%，而且一直在快速下降。</div>
+          <div>链接</div><div><a href="https://x.com/peonyKingOF/status/2074644694936510795" target="_blank" rel="noopener noreferrer">X 原帖</a></div>
+          <div>与 Hesai 的相关性</div><div>高。是对 Hesai 监管风险叙事的直接反驳，表明市场分歧正在扩大。</div>
+        </div>
+      </div>
+
+      <div class="post">
+        <h3>【重点：涉及 HESAI】市场回应：若限制落地，西方 lidar 厂商或受益</h3>
+        <div class="kv">
+          <div>平台</div><div>X</div>
+          <div>作者 / 账号</div><div>@jacobxalpha</div>
+          <div>发布时间</div><div>2026-07-08 05:56:16 CST（X 页面时间换算）</div>
+          <div>原文摘录</div><div>If scrutiny on Hesai turns into real restrictions, it opens real runway for $OUST, $AEVA and the upstream laser suppliers like $LITE and $SIVE.</div>
+          <div>中文直译</div><div>如果针对 Hesai 的审查变成真正的限制措施，这会给 <code>$OUST</code>、<code>$AEVA</code> 以及像 <code>$LITE</code>、<code>$SIVE</code> 这样的上游激光供应商打开实质性的增长空间。</div>
+          <div>链接</div><div><a href="https://x.com/jacobxalpha/status/2074613494629241217" target="_blank" rel="noopener noreferrer">X 原帖</a></div>
+          <div>与 Hesai 的相关性</div><div>高。把 Hesai 风险直接转译成西方对手受益逻辑，属于股票情绪层面的替代交易。</div>
+        </div>
+      </div>
+
+      <div class="post">
+        <h3>Reddit 目标子版块检查结果</h3>
+        <div class="kv">
+          <div>检索范围</div><div><code>r/stocks</code>、<code>r/investing</code>、<code>r/wallstreetbets</code>、<code>r/ChinaStocks</code></div>
+          <div>关键词</div><div><code>HESAI</code>、<code>HSAI</code>、<code>physical AI</code>、<code>AI stocks</code>、<code>lidar</code></div>
+          <div>结果概览</div><div>公开搜索结果主要命中旧帖、转贴或站外搬运，未发现过去 24 小时内的新高可信公开讨论。</div>
+          <div>原文摘录</div><div>过去 24 小时内未发现高可信公开讨论。</div>
+          <div>中文直译</div><div>无新增可核验样本，因此不列具体帖子。</div>
+          <div>链接</div><div>以公开搜索结果页、Reddit 帖子落地页和站外转贴页为辅助核验。</div>
+          <div>与 Hesai 的相关性</div><div>无新增强信号；Reddit 仍未把 Hesai 推成当日独立热点。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>市场关注重点总结</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>投资者正在关注什么</h3>
+          <ul class="list">
+            <li>Hesai 与 NVIDIA 合作是否引发更强的美国监管审查</li>
+            <li>若中国 lidar 受限，西方替代厂商是否受益</li>
+            <li>Hesai 的美国收入敞口到底有多大</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>哪些主题在升温 / 降温</h3>
+          <ul class="list">
+            <li>升温：Hesai 的监管与国家安全叙事</li>
+            <li>升温：lidar 板块内的替代交易逻辑</li>
+            <li>降温：Reddit 上 broad physical AI / AI stocks 的新增股票讨论</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>对 Hesai 的机会 / 风险</h3>
+          <ul class="list">
+            <li>风险：中美监管与安全审查情绪升温</li>
+            <li>风险：市场把 Hesai 当成“西方替代”交易的对立面</li>
+            <li>机会：若美国敞口确实有限，股价层面可能出现过度解读后的修复博弈</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>重点媒体与记者报道追踪</h2>
+      <p class="muted">检索口径：按 AGENTS.MD 中完整名单与常见别名分组搜索，包括 <code>Josh Wasington / Josh Washington</code>、<code>Doug Boulduc / Doug Bolduc</code>、<code>The Detriot News / The Detroit News</code>、<code>The Glass Alamac / The Glass Almanac</code>。过去 24 小时内未发现上述重点记者新发表、且与 Hesai 相关性较高的报道。</p>
+      <div class="table-wrap" style="margin-top: 14px;">
+        <table>
+          <thead>
+            <tr>
+              <th>类别</th>
+              <th>检索结论</th>
+              <th>对 Hesai 的影响</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Reuters / FT / WSJ / Nikkei / NYT / TechCrunch / BBC / Bloomberg</td>
+              <td>近 24 小时分组检索未找到可核验的新稿，或结果与 Hesai 相关性不足。</td>
+              <td>无新增高可信媒体催化。</td>
+            </tr>
+            <tr>
+              <td>Automotive News 系、Motor1、Forbes、The Robot Report、The Information 等</td>
+              <td>未检索到满足“过去 24 小时 + 与 Hesai 相关性较高”的新报道。</td>
+              <td>行业媒体层面暂无新增直接情绪推动。</td>
+            </tr>
+            <tr>
+              <td>附注</td>
+              <td>公开搜索结果中能看到一条与 Hesai 相关的 CNBC 节目/视频传播痕迹，但公开缓存未稳定显示为记者作者页结果，因此未把它计入“记者名单已核验命中”。</td>
+              <td>表明舆情有扩散，但暂不作为记者名单命中处理。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>@aleabitoreddit 言论追踪</h2>
+      <div class="post">
+        <h3>帖文 1：直接点名 Hesai 监管风险</h3>
+        <div class="kv">
+          <div>发布时间</div><div>2026-07-08 03:49:55 CST</div>
+          <div>原文</div><div>Hesai Technology, a Chinese lidar maker faces US national scrutiny over its expanded partnership with $NVDA and lidar sensors.</div>
+          <div>中文直译</div><div>中国激光雷达制造商 Hesai Technology 因其扩大的英伟达合作和激光雷达传感器业务而面临美国国家安全审查。</div>
+          <div>链接</div><div><a href="https://x.com/aleabitoreddit/status/2074581698604593367" target="_blank" rel="noopener noreferrer">X 原帖</a></div>
+          <div>对 Hesai 的潜在影响</div><div>偏负面，直接放大美国监管风险。</div>
+        </div>
+      </div>
+      <div class="post">
+        <h3>帖文 2：把审查逻辑概括成“西方对手受益”</h3>
+        <div class="kv">
+          <div>发布时间</div><div>2026-07-08 04:11:05 CST</div>
+          <div>原文</div><div>Basically: major Chinese lidar player might be banned in West. $OUST, $AEVA, and others benefit by filling in the vacuum.</div>
+          <div>中文直译</div><div>核心意思是：主要的中国激光雷达厂商可能会在西方被禁，<code>$OUST</code>、<code>$AEVA</code> 等公司会因填补空白而受益。</div>
+          <div>链接</div><div><a href="https://x.com/aleabitoreddit/status/2074587024959709419" target="_blank" rel="noopener noreferrer">X 原帖</a></div>
+          <div>对 Hesai 的潜在影响</div><div>偏负面，强化替代交易叙事。</div>
+        </div>
+      </div>
+      <div class="note small">
+        说明：本次监测窗口内，@aleabitoreddit 的重点新增内容已明显转向 Hesai / lidar 监管叙事，不再只是 broad physical AI 估值讨论。
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>附录</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>搜索关键词</h3>
+          <ul class="list small">
+            <li><code>site:reddit.com/r/stocks HESAI OR HSAI</code></li>
+            <li><code>site:reddit.com/r/investing HESAI OR HSAI</code></li>
+            <li><code>site:x.com HESAI OR HSAI</code></li>
+            <li><code>from:aleabitoreddit</code></li>
+            <li><code>Hesai Nvidia scrutiny lidar</code></li>
+            <li>重点记者名单 + Hesai / lidar / autonomous driving / robotics</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>数据来源</h3>
+          <ul class="list small">
+            <li>OpenAI `web_search` 搜索结果</li>
+            <li>X 原始搜索页与原帖链接（Chrome 核验）</li>
+            <li>公开搜索结果中的 Reddit / 站外转贴页</li>
+            <li>重点媒体站点与作者名分组搜索结果</li>
+          </ul>
+        </div>
+      </div>
+      <div class="note small">
+        未覆盖或访问受限说明：1）X 已处于登录态，但自动化读取页面内容受限，因此正文与时间以可见页面内容为准；2）Reddit 公开搜索结果可用，但站内新帖热度信号有限；3）CNBC 主站对自动抓取有限制，相关节目痕迹主要通过公开转贴和搜索结果辅助确认。
+      </div>
+    </section>
+  </div>
+</body>
+</html>
