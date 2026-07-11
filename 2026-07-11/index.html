@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日舆情监测简报 - 2026-07-11</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f3f6fb;
+      --panel: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #d8e0ea;
+      --accent: #0f766e;
+      --accent-bg: #ecfeff;
+      --focus: #9a3412;
+      --focus-bg: #fff7ed;
+      --warn: #92400e;
+      --warn-bg: #fef3c7;
+      --soft: #eef2ff;
+      --soft-text: #3730a3;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 14px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: #0f5cc0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+    .hero, .section, .card, .table-wrap {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .hero, .section, .table-wrap { padding: 20px; margin-bottom: 16px; }
+    .card { padding: 14px; }
+    h1, h2, h3, p, ul, table { margin: 0; }
+    h1 { font-size: 29px; margin-bottom: 10px; }
+    h2 { font-size: 19px; margin-bottom: 14px; }
+    h3 { font-size: 15px; margin-bottom: 8px; }
+    .meta {
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+    }
+    .overview {
+      margin-top: 14px;
+      padding: 12px 14px;
+      background: var(--accent-bg);
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .list { padding-left: 18px; }
+    .list li + li { margin-top: 8px; }
+    .muted { color: var(--muted); }
+    .small { font-size: 12px; }
+    .tag, .tag-focus, .tag-warn, .tag-soft {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-right: 6px;
+    }
+    .tag { background: #ecfeff; color: #155e75; }
+    .tag-focus { background: var(--focus-bg); color: var(--focus); }
+    .tag-warn { background: var(--warn-bg); color: var(--warn); }
+    .tag-soft { background: var(--soft); color: var(--soft-text); }
+    .post {
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+      margin-top: 14px;
+    }
+    .post:first-child {
+      border-top: 0;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .kv {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 8px 12px;
+      margin-top: 10px;
+    }
+    .kv div:nth-child(odd) {
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .note {
+      margin-top: 10px;
+      padding: 10px 12px;
+      background: #f8fafc;
+      border-radius: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 10px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      color: var(--muted);
+      font-weight: 600;
+      border-top: 0;
+    }
+    code {
+      background: #eff6ff;
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+    @media (max-width: 860px) {
+      .grid, .grid-3 { grid-template-columns: 1fr; }
+      .kv { grid-template-columns: 1fr; gap: 4px; }
+      table, thead, tbody, tr, th, td { display: block; }
+      th { padding-bottom: 0; }
+      td { border-top: 0; padding-top: 4px; }
+      tr { border-top: 1px solid var(--line); padding: 8px 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>每日舆情监测简报</h1>
+      <div class="meta">
+        <span>生成时间：2026-07-11 08:02:16 CST（Asia/Shanghai）</span>
+        <span>监测窗口：2026-07-10 08:02:16 CST 至 2026-07-11 08:02:16 CST</span>
+        <span>主题：物理 AI、AI 股票、机器人 / 自动驾驶 / 激光雷达、Hesai / HESAI / HSAI / 禾赛科技</span>
+      </div>
+      <div class="overview">
+        一句话总览：过去 24 小时内，目标范围里仍未核验到新的高可信 <strong>HESAI / HSAI</strong> 公开讨论；可确认的增量主要来自 <strong>@aleabitoreddit</strong> 对光模块、亚马逊/OpenAI 供应链与中国渠道观察的连续发言。
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>执行摘要</h2>
+      <ul class="list">
+        <li><span class="tag-warn">HESAI 相关讨论：未发现高可信新增热点</span> X 的 latest 搜索页可打开，但结果流自动化读取为空；结合公开搜索与落地页抽查，未见过去 24 小时内可稳定核验的新增 HESAI / HSAI 帖子。</li>
+        <li>Reddit 重点子版块 <code>r/stocks</code>、<code>r/investing</code>、<code>r/wallstreetbets</code>、<code>r/ChinaStocks</code> 未检出满足“高互动 + 高相关 + 可核验”的新帖，公开可见结果以旧帖为主。</li>
+        <li><code>@aleabitoreddit</code> 在窗口内至少有 3 条高互动帖子，集中在光通信、亚马逊 / OpenAI 供应链、以及中国渠道观察；均未直接点名 Hesai。</li>
+        <li>按 AGENTS.MD 记者名单与常见别名做批量检索后，未核验到过去 24 小时内“新发表且与 Hesai 相关性较高”的重点记者原创报道。</li>
+        <li>对 Hesai 而言，今天仍偏“缺席交易日”：社交平台没有新增催化，媒体侧也未见直接利空或利多。</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>X 与 Reddit 舆情</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>X 平台</h3>
+          <p class="muted">Chrome 已用于核验 <code>@aleabitoreddit</code> 主页及 <code>HESAI OR HSAI OR Hesai OR 禾赛科技</code> 的 latest 搜索页。当前 Chrome 已处于登录态，但 X 搜索结果页自动化读取受限，因此时间以平台显示为准。</p>
+        </div>
+        <div class="card">
+          <h3>Reddit 平台</h3>
+          <p class="muted">先用公开搜索批量扫过目标子版块，再抽查公开落地页；过去 24 小时内未发现可稳定核验、且直接关联 Hesai 的高互动帖子。</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <h3>X / HESAI 搜索结果检查</h3>
+        <div class="kv">
+          <div>平台</div><div>X</div>
+          <div>作者或账号</div><div>不适用（搜索结果页）</div>
+          <div>发布时间</div><div>2026-07-11 08:xx CST 左右核验；帖子时间以平台显示为准</div>
+          <div>原文摘录</div><div>过去 24 小时内未发现高可信公开讨论。</div>
+          <div>中文直译</div><div>无新增高可信样本，因此不列具体 HESAI 帖子。</div>
+          <div>链接</div><div><a href="https://x.com/search?q=HESAI%20OR%20HSAI%20OR%20Hesai%20OR%20%E7%A6%BE%E8%B5%9B%E7%A7%91%E6%8A%80&amp;src=typed_query&amp;f=live" target="_blank" rel="noopener noreferrer">X latest 搜索页</a></div>
+          <div>与 Hesai 的相关性判断</div><div>高相关检索，但结果流读取受限，公开搜索也未给出过去 24 小时内的可靠新帖，因此保守记为“未核验到新增高可信讨论”。</div>
+        </div>
+      </div>
+
+      <div class="post">
+        <h3>Reddit 目标子版块检查结果</h3>
+        <div class="kv">
+          <div>平台</div><div>Reddit</div>
+          <div>作者或账号</div><div>不适用（搜索结果与公开落地页）</div>
+          <div>发布时间</div><div>2026-07-11 08:xx CST 左右核验；帖子时间以平台显示为准</div>
+          <div>原文摘录</div><div>过去 24 小时内未发现高可信公开讨论。</div>
+          <div>中文直译</div><div>未找到满足“高互动 + 高相关 + 可核验”条件的新帖，因此不列具体 Reddit 帖子。</div>
+          <div>链接</div><div><a href="https://www.google.com/search?q=site%3Areddit.com%2Fr%2Fstocks+OR+site%3Areddit.com%2Fr%2Finvesting+OR+site%3Areddit.com%2Fr%2Fwallstreetbets+OR+site%3Areddit.com%2Fr%2FChinaStocks+%28HESAI+OR+HSAI+OR+Hesai+OR+%E7%A6%BE%E8%B5%9B%E7%A7%91%E6%8A%80+OR+lidar+OR+%22physical+AI%22+OR+%22AI+stocks%22%29" target="_blank" rel="noopener noreferrer">公开搜索查询</a></div>
+          <div>与 Hesai 的相关性判断</div><div>现阶段公开 Reddit 结果更多是历史讨论而非过去 24 小时的新一轮集中博弈，对 Hesai 没有形成新增情绪牵引。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>市场关注重点总结</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>投资者正在关注什么</h3>
+          <p>亚马逊 / OpenAI 相关供应链、光模块板块走弱后的反身性交易、中国渠道反馈，以及 AI 基建链条的中游环节分化。</p>
+        </div>
+        <div class="card">
+          <h3>哪些主题在升温 / 降温</h3>
+          <p>升温：光通信和 AI 基建供应链细分讨论。降温：Hesai / lidar 单独产业链没有新增高强度舆情推动。</p>
+        </div>
+        <div class="card">
+          <h3>与 Hesai 相关的机会或风险</h3>
+          <p>短线偏中性。没有新增针对中国激光雷达链的监管或订单类叙事，意味着 Hesai 暂未得到新催化，也暂未承受新增舆情冲击。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>重点媒体与记者报道追踪</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>范围</th>
+              <th>检索结果</th>
+              <th>重点信息</th>
+              <th>对 Hesai 的潜在影响</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Reuters / TechCrunch / FT / NYT / WSJ / Nikkei / Bloomberg / BBC 等重点作者页与站内结果</td>
+              <td>过去 24 小时内未发现上述重点记者新发表、且与 Hesai 相关性较高的报道。</td>
+              <td>1. 已按记者名单和别名批量搜索。<br>2. 可见结果多为旧文、泛 AI / 汽车报道，或与 Hesai 关联度不足。<br>3. 因无高相关新增报道，本节不列单篇条目。</td>
+              <td>中性；未见新增媒体催化。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note small">说明：本轮重点核验了 Reuters（Abhirup Roy、Nick Carey）、TechCrunch（Kirsten Korosec、Rebecca Bellan、Sean O'Kane）等高相关作者组合；若平台仅显示近似时间，则以平台展示为准。</div>
+    </section>
+
+    <section class="section">
+      <h2>@aleabitoreddit 言论追踪</h2>
+
+      <div class="post">
+        <h3>帖子 1</h3>
+        <div class="kv">
+          <div>发布时间</div><div>2026-07-11 02:17:16 CST（X 显示时间对应 2026-07-10T18:17:16Z）</div>
+          <div>原文</div><div>Regarding $AMZN RNG + OpenAI's MRC and VCSELs... In what appears to be an indirect response on B. Riley's $AAOI sell report regarding optimizations that "flattens networks and cuts transceiver TAM 40-50%".</div>
+          <div>中文直译</div><div>关于亚马逊相关链条、OpenAI 的 MRC 与 VCSEL。这看起来像是在间接回应 B. Riley 对 AAOI 的看空报告，即某些优化会把网络拉平，并让光模块市场空间下降 40% 到 50%。</div>
+          <div>链接</div><div><a href="https://x.com/aleabitoreddit/status/2075645547978084371" target="_blank" rel="noopener noreferrer">原帖链接</a></div>
+          <div>可能对 Hesai 的影响</div><div>无直接影响；更偏 AI 光通信链情绪。</div>
+        </div>
+      </div>
+
+      <div class="post">
+        <h3>帖子 2</h3>
+        <div class="kv">
+          <div>发布时间</div><div>2026-07-11 01:31:39 CST（X 显示时间对应 2026-07-10T17:31:39Z）</div>
+          <div>原文</div><div>Rosenblatt on recent optical sector weakness from $AAOI to $LITE: "Stocks in the Optical sector have traded poorly for the last 1-2 months" due to CPO delay reports and China capacity scares.</div>
+          <div>中文直译</div><div>Rosenblatt 谈到从 AAOI 到 LITE 的近期光学板块疲弱：过去 1 到 2 个月，光学板块股票表现很差，原因是 CPO 延迟报告，以及市场对中国产能的担忧。</div>
+          <div>链接</div><div><a href="https://x.com/aleabitoreddit/status/2075634064518955297" target="_blank" rel="noopener noreferrer">原帖链接</a></div>
+          <div>可能对 Hesai 的影响</div><div>间接反映中国产能情绪波动。</div>
+        </div>
+      </div>
+
+      <div class="post">
+        <h3>帖子 3</h3>
+        <div class="kv">
+          <div>发布时间</div><div>2026-07-11 01:20:11 CST（X 显示时间对应 2026-07-10T17:20:11Z）</div>
+          <div>原文</div><div>Just an interesting channel check regarding China ...</div>
+          <div>中文直译</div><div>只是一个关于中国的有意思的渠道核查。</div>
+          <div>链接</div><div><a href="https://x.com/aleabitoreddit/status/2075631179018166699" target="_blank" rel="noopener noreferrer">原帖链接</a></div>
+          <div>可能对 Hesai 的影响</div><div>仅属中国科技供应链情绪侧信号。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>附录</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>搜索关键词</h3>
+          <ul class="list small">
+            <li><code>HESAI OR HSAI OR Hesai OR 禾赛科技</code></li>
+            <li><code>physical AI</code>, <code>AI stocks</code>, <code>robotics AI</code>, <code>autonomous driving AI</code>, <code>lidar</code></li>
+            <li><code>site:reddit.com/r/stocks</code>, <code>site:reddit.com/r/investing</code>, <code>site:reddit.com/r/wallstreetbets</code>, <code>site:reddit.com/r/ChinaStocks</code></li>
+            <li><code>from:aleabitoreddit</code></li>
+            <li>重点记者姓名 + 媒体名 + 主题词 / 别名拼写</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>数据来源</h3>
+          <ul class="list small">
+            <li>X：<a href="https://x.com/aleabitoreddit" target="_blank" rel="noopener noreferrer">@aleabitoreddit</a>、X latest 搜索页</li>
+            <li>公开搜索结果：Google / 通用网页搜索结果页</li>
+            <li>重点媒体官网与作者页：Reuters、TechCrunch、FT、NYT、WSJ、Nikkei 等</li>
+            <li>Reddit 公开落地页与搜索结果</li>
+          </ul>
+        </div>
+      </div>
+      <div class="note small">
+        未覆盖或访问受限说明：1. X 搜索结果页可打开，但结果流自动化读取受限；当前只能确认 Chrome 已登录，不把读取不稳定表述为“未登录”。 2. Reddit 与部分媒体站点的公开搜索结果偏向旧帖或聚合页，若无原始落地页与时间可核验，则不写入事实结论。 3. 重点记者名单已做批量检索，但无高相关新增报道时仅保留汇总说明，不强行填充条目。
+      </div>
+    </section>
+  </div>
+</body>
+</html>
