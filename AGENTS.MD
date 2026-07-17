@@ -83,12 +83,13 @@ Reddit 重点子版块：
 
 检索以下媒体与记者在过去 24 小时内发表的报道。不要只检索 Keith Bradsher，必须覆盖完整名单；如果某位记者未发现新报道，也要在结果中如实说明。
 
-重点关注来源包括但不限于：
+本项统一使用 Google News RSS 搜索进行过去 24 小时初筛。RSS 地址格式为：
 
-- 记者所属媒体官网
-- 记者个人作者页
-- 搜索引擎新闻结果
-- 公开转载或聚合页面，但最终优先核验原始媒体链接
+```text
+https://news.google.com/rss/search?q=<URL 编码查询>&hl=en-US&gl=US&ceid=US:en
+```
+
+查询中加入 `when:1d`，按记者、媒体和别名分批检索；控制频率并避免高并发请求，以降低 `429`、`403`、空结果或验证码页面的概率。RSS 是候选发现来源，不是原始媒体全文；只可将 RSS 实际返回的标题、链接、来源和时间写入简报，不能把 RSS 无结果表述为已逐页核验后的绝对“无报道”。
 
 如记者姓名或媒体名称存在疑似拼写差异，应同时检索用户给定写法和常见媒体公开写法，并在附录注明采用过的别名或校正写法。例如：`Josh Wasington / Josh Washington`、`Doug Boulduc / Doug Bolduc`、`The Detriot News / The Detroit News`、`The Glass Alamac / The Glass Almanac`。
 
@@ -159,10 +160,28 @@ Reddit 重点子版块：
 如果没有发现过去 24 小时内的新报道，明确写：
 
 ```text
-过去 24 小时内未发现上述重点记者新发表、且与 Hesai 相关性较高的报道。
+Google News RSS 初筛未发现上述重点记者过去 24 小时内新发表、且与 Hesai 相关性较高的报道；未逐篇原始媒体页核验。
 ```
 
-### 3. X 博主 @aleabitoreddit 过去 24 小时言论
+### 3. Hesai 关键词新闻 RSS 追踪
+
+除记者名单外，必须单独使用 Google News RSS 搜索 `Hesai`、`HESAI`、`HSAI`、`禾赛科技`，并将检索结果纳入当日汇总。
+
+每条高相关新闻必须包含：
+
+- 标题
+- RSS 显示的来源和发布时间
+- RSS 条目链接
+- 重点信息，控制在 2-4 条
+- 可能对 Hesai 的影响，必须非常精简
+
+只收录直接涉及 Hesai、其股票、产品、客户、监管或激光雷达产业链的结果；财经网站的自动估值页、重复转载、无作者的模板化股票内容应降级标注或不纳入执行摘要。若 RSS 无高可信结果，明确写：
+
+```text
+Google News RSS 初筛未发现过去 24 小时内直接涉及 Hesai 的高可信新闻。
+```
+
+### 4. X 博主 @aleabitoreddit 过去 24 小时言论
 
 检索 X 账号：
 
@@ -206,17 +225,22 @@ Reddit 重点子版块：
    - 哪些主题升温或降温
    - 与 Hesai 相关的机会或风险
 
-5. 重点媒体与记者报道追踪
+5. Hesai 关键词新闻追踪
+   - RSS 新闻列表
+   - 重点信息
+   - 对 Hesai 的潜在影响
+
+6. 重点媒体与记者报道追踪
    - 报道列表
    - 重点信息
    - 对 Hesai 的潜在影响
 
-6. @aleabitoreddit 言论追踪
+7. @aleabitoreddit 言论追踪
    - 帖子列表
    - 原文和中文直译
    - 对 Hesai 的潜在影响
 
-7. 附录
+8. 附录
    - 搜索关键词
    - 数据来源
    - 未覆盖或访问受限说明
@@ -247,100 +271,31 @@ Reddit 重点子版块：
 
 ## 推荐搜索方式
 
-信息检索时必须综合使用 `web_search` 工具和 Chrome 插件进一步核验。
-
-对于 X 和 Reddit 的公开社媒内容，若当前 Codex 会话已加载 `superpowers-social` MCP，优先使用该 MCP 暴露的社媒查询工具定位帖子、作者、发布时间和互动信息；再按需使用 Chrome 打开原始链接核验上下文。不要把 MCP 的搜索摘要直接当作已核验原文。
+社媒信息必须优先使用 `superpowers-social` MCP；记者报道和 Hesai 新闻必须使用 Google News RSS 搜索。
 
 基本原则：
 
-- 先用 `web_search` 批量检索关键词、平台页面、作者页和新闻结果，快速定位候选信息。
-- 对重要帖子、疑似 HESAI 相关内容、重点媒体与记者报道、@aleabitoreddit 发言，尽量打开原始链接核验原文、发布时间和上下文。
-- Reddit、X 等带风控、登录态、动态加载的平台，默认先使用 `superpowers-social` MCP 的社媒查询工具；对重点结果或 MCP 不可用时，使用 `chrome` 插件，不要优先使用内置 browser 插件。
-- 除非用户明确要求内置 browser，或 Chrome 插件明确不可用，否则不要使用内置 browser 插件去打开 Reddit / X。
-- 对无法通过 Chrome 访问的页面，应记录访问限制，并使用可核验的搜索结果或公开缓存信息作为辅助依据；不能确认的内容不要写成事实。
-- 对 X 页面，如果 Chrome 插件打开的任务标签页已经确认带有用户登录态，不要把“页面正文抓取不稳定 / 动态加载失败 / 公开内容读取不完整”表述成“未登录”。应明确写成“已处于登录态，但自动化读取页面内容受限”，并把“登录态问题”和“页面可读性 / 抓取稳定性问题”区分开。
-- 最终简报中应在附录列明主要使用的数据来源，并注明哪些来源存在访问限制。
+- X：使用 `twitter_search`、`twitter_read`、`twitter_thread`、`twitter_user_tweets` 获取正文、账号、发布时间、链接和互动数据。
+- Reddit：使用 `reddit_search` 定位候选，使用 `reddit_get_post` 获取正文及必要评论；覆盖四个指定子版块。
+- 不把 MCP 搜索摘要当作事实。对拟收录的重点帖子，必须调用对应详情工具取得正文；MCP 无法返回或字段矛盾时，标注“社媒接口未能可靠确认”，不编造内容。
+- 记者与 Hesai 新闻：用 Google News RSS 低频、分批检索，记录实际命中的 RSS 条目。遇到 `429`、`403`、空结果或无法解析 XML 时，写明 RSS 访问 / 检索受限，不把它写成“未发现报道”。
+- 最终简报在附录列明 `superpowers-social MCP` 和 Google News RSS，并说明社媒接口和 RSS 聚合结果各自的限制。
 
 可使用的搜索查询示例：
 
 ```text
-site:reddit.com/r/stocks HESAI OR HSAI
-site:reddit.com/r/investing HESAI OR HSAI
-site:reddit.com/r/wallstreetbets HESAI OR HSAI
-site:reddit.com/r/ChinaStocks HESAI OR HSAI
-site:reddit.com/r/stocks "physical AI" OR "AI stocks"
-site:x.com HESAI OR HSAI "AI"
-site:x.com "physical AI" stocks
-site:nytimes.com "Keith Bradsher"
-site:nytimes.com "Melissa Eddy"
-site:ft.com "Edward White" OR "Eleanor Olcott" OR "Robin Harding" OR "Gloria Li"
-site:reuters.com "Abhirup Roy" OR "Nick Carey"
-site:wsj.com "Jonathan Cheng" OR "Jiahui Huang" OR "Eric Bellman"
-site:techcrunch.com "Kirsten Korosec" OR "Rebecca Bellan" OR "Sean O'Kane"
-site:autonews.com "Molly Boigon" OR "Pete Bigelow" OR "Jamie Butters" OR "Hans Greimel" OR "John Irwin" OR "Lindsay VanHulle" OR "Laurence Iliff"
-site:autonews.com "Doug Boulduc" OR "Lois Jones"
-site:nikkei.com "Wataru Suzuki" OR "Eiki Hayashi"
-"Stephen McDonell" BBC past 24 hours
-"Linda Lew" Bloomberg past 24 hours
-"Gwyneth Bejer" "Charlton Media" past 24 hours
-"Gustav Theile" "Frankfurter Allgemeine" past 24 hours
-"Paige Tortelli" CNBC past 24 hours
-"Arvid Haitsch" "Der Spiegel" past 24 hours
-"Sabbir Rangwala" Forbes past 24 hours
-"Sam Abuelsamid" Forbes past 24 hours
-"Tobias Piller" "Frankfurter Allgemeine Zeitung" past 24 hours
-"Kevin Jost" Futurride past 24 hours
-"Massimo Grassi" "Motor1.com" past 24 hours
-"Khushi Mandowara" "MT Newswires" past 24 hours
-"Josh Wasington" OR "Josh Washington" "Acumen Media" past 24 hours
-"Wilfried Boehler" "Auto Haus" past 24 hours
-"Niklas Kurz" Autoambition past 24 hours
-"Doug Boulduc" OR "Doug Bolduc" "Automotive News Europe" past 24 hours
-"Brena Noble" "The Detriot News" OR "The Detroit News" past 24 hours
-"Brian Foster" "The Glass Alamac" OR "The Glass Almanac" past 24 hours
-"Steve LeVine" "The Information" past 24 hours
-"Brianna Wessling" "The Robot Report" past 24 hours
-"Mike Oitzman" "The Robot Report" past 24 hours
-"Jason Dean" "Washington Post Intelligence" past 24 hours
-site:x.com/aleabitoreddit
-from:aleabitoreddit
+MCP：reddit_search(subreddit=stocks|investing|wallstreetbets|ChinaStocks, query=HESAI OR HSAI OR lidar OR "physical AI" OR "AI stocks", sort=new, time_filter=day)
+MCP：twitter_search(query=(HESAI OR HSAI OR "physical AI" OR lidar OR "AI stocks") since:YYYY-MM-DD)
+MCP：twitter_user_tweets(handle=aleabitoreddit)
+RSS：Hesai OR HESAI OR HSAI OR 禾赛科技 when:1d
+RSS："记者姓名" "媒体名称" when:1d
+RSS："Josh Wasington" OR "Josh Washington" "Acumen Media" when:1d
+RSS："Doug Boulduc" OR "Doug Bolduc" "Automotive News Europe" when:1d
+RSS："Brena Noble" "The Detroit News" when:1d
+RSS："Brian Foster" "The Glass Almanac" when:1d
 ```
 
 如工具支持时间过滤，优先使用过去 24 小时过滤。
-
-## Chrome 插件使用规范
-
-### 必须遵守
-
-- 开始 Chrome 检索任务时，必须新建当前任务自己的标签页，不要复用用户已经打开的个人标签页。
-- 如果创建了本任务专用的 session / 分组，后续所有导航和检索都应在该任务新建的标签页内完成。
-- 不要为了省事 claim 或改写用户现有正在使用的 tab，除非用户明确要求“就在我这个 tab 上继续”。
-- 对 Reddit、X 这类站点，优先 `chrome.tabs.new()` 创建新标签页；如果工具行为异常，再排查 session 绑定问题，不要直接切去用户现有 tab。
-- 每次导航后先验证当前 tab 是否属于本次 Chrome session，再继续后续操作。
-- 对搜索结果页和详情页，优先一次打开、一次提取，不要反复来回切换多个标签页。
-
-### 常见错误
-
-- 创建了 Chrome session，但后续没有在该 session 自己创建的 tab 上工作，转而复用或 claim 了用户原有 tab。
-- 看到 `selected()` 或 `about:blank` 就直接拿来用，没有确认它是不是用户已有 tab、是不是当前 session 的可控 tab。
-- claim 了用户 tab 之后直接 `goto`，把用户原本打开的页面覆盖掉。
-- 任务结束后没有执行 tab 清理，导致每日任务不断堆积标签页。
-- 把“插件连接异常 / tab 不在当前 session”误当成“只能改用现有 tab”的理由。
-
-### Best Practice
-
-1. 连接 Chrome 后，先命名 session。
-2. 创建任务专用新标签页，并立刻确认后续引用的就是这个 tab。
-3. 所有 Reddit / X / NYT / 搜索引擎导航都在这个任务 tab 或同一任务派生 tab 中完成。
-4. 如果 tab/session 关系异常，先排查插件状态或重新获取当前 session 的 tab，不要碰用户现有 tab。
-5. 任务完成后，执行清理，只保留用户明确要求保留的标签页。
-
-### 清理要求
-
-- 每次任务结束前，必须清理本次自动化创建的 Chrome 标签页。
-- 默认不保留研究过程中的中间页、搜索页、帖子详情页、报错页、空白页。
-- 只有在用户明确要求保留时，才保留某个 tab。
-- 如果本次任务创建了多个标签页，结束时必须统一 finalize / cleanup，避免每日运行导致 tab 无限增加。
 
 ## 文件与目录规则
 
