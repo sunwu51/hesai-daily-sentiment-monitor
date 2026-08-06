@@ -12,11 +12,11 @@
   <header>
     <h1>每日外网舆情监测简报</h1>
     <div class="meta">生成时间：2026-08-06 08:01（Asia/Shanghai，UTC+8）<br>监测窗口：2026-08-05 08:01 至 2026-08-06 08:01（Asia/Shanghai）</div>
-    <p class="lead">本窗口的高可信公司信息主要来自 Hesai 官方 RSS 命中：公司宣布入选摩根士丹利 Humanoid 100，并发布 Yole 2026 车载报告相关内容。社媒 MCP 在当前运行环境未暴露，无法可靠确认 X 与 Reddit 的新增讨论。</p>
+    <p class="lead">本窗口的高可信公司信息主要来自 Hesai 官方 RSS 命中：公司宣布入选摩根士丹利 Humanoid 100，并发布 Yole 2026 车载报告相关内容。superpowers-social MCP 已注册，但本次社媒请求失败或超时，无法可靠确认 X 与 Reddit 的新增讨论。</p>
   </header>
 
   <section><h2>执行摘要</h2><ul>
-    <li><strong>发现 HESAI 相关讨论：社媒接口未能可靠确认。</strong> 当前环境未提供 <code>superpowers-social</code> MCP 的可调用接口，因此未将任何 X 或 Reddit 搜索摘要、转述或猜测写成帖子事实。</li>
+    <li><strong>发现 HESAI 相关讨论：社媒接口未能可靠确认。</strong> <code>superpowers-social</code> MCP 已注册，但本次 <code>twitter_search</code>、<code>reddit_search</code> 和账号时间线请求失败或超时；因此未将任何搜索摘要、转述或猜测写成帖子事实。</li>
     <li>Google News RSS 命中 Hesai 官方英文稿 <em>Hesai Named to Morgan Stanley's Humanoid 100</em>，表明公司将其置于人形机器人产业叙事中；该条为公司自发布，非独立第三方验证。</li>
     <li>中文 RSS 命中 Hesai 官方关于 Yole 2026 车载报告的稿件，标题称其 ADAS 主激光雷达出货量全球第一；该结论应以原始报告方法和公司披露为准。</li>
     <li>重点记者名单已按四批进行 Google News RSS <code>when:1d</code> 初筛；未发现可由 RSS 可靠归属名单作者、且直接涉及 Hesai 的高相关报道。</li>
@@ -24,8 +24,8 @@
   </ul></section>
 
   <section><h2>X 与 Reddit 舆情</h2>
-    <div class="card"><span class="tag">访问受限</span><p><b>X：</b>本次运行环境未暴露项目规定的 <code>twitter_search</code>、<code>twitter_read</code> 或 <code>twitter_user_tweets</code> 工具，无法取得可核验的正文、作者、发布时间和链接。因此，过去 24 小时内 HESAI、物理 AI、AI 股票及激光雷达讨论<strong>未能可靠确认</strong>。</p><p><b>Reddit：</b>本次运行环境未暴露 <code>reddit_search</code> 和 <code>reddit_get_post</code> 工具，无法覆盖 r/stocks、r/investing、r/wallstreetbets、r/ChinaStocks 并确认帖子详情。因此，过去 24 小时内高可信公开讨论<strong>未能可靠确认</strong>。</p></div>
-    <p class="note">未使用网页搜索结果替代社媒详情接口。待 MCP 恢复后，应使用详情工具补充原文、直译、作者、平台时间、互动数据与链接。</p>
+    <div class="card"><span class="tag">请求受限</span><p><b>X：</b><code>superpowers-social</code> 已注册，但本次 <code>twitter_search</code> 请求失败，<code>twitter_user_tweets</code> 重试超时，无法取得可核验的正文、作者、发布时间和链接。因此，过去 24 小时内 HESAI、物理 AI、AI 股票及激光雷达讨论<strong>未能可靠确认</strong>。</p><p><b>Reddit：</b><code>reddit_search</code> 对 r/stocks、r/investing、r/wallstreetbets、r/ChinaStocks 的请求均失败，无法覆盖指定子版并确认帖子详情。因此，过去 24 小时内高可信公开讨论<strong>未能可靠确认</strong>。</p></div>
+    <p class="note">未使用网页搜索结果替代社媒详情接口。待 MCP 请求恢复后，应使用详情工具补充原文、直译、作者、平台时间、互动数据与链接。</p>
   </section>
 
   <section><h2>市场关注重点总结</h2><div class="grid"><div class="card"><strong>本窗口可确认主题</strong><ul><li>人形机器人：Hesai 官方将公司纳入 Morgan Stanley Humanoid 100 的传播语境。</li><li>车载激光雷达：官方稿件引用 Yole 2026 车载报告，聚焦 ADAS 主激光雷达出货量。</li><li>自动驾驶：中文 RSS 的另一条行业资讯标题提及自动驾驶政策与高阶智驾，但 RSS 未给出足以确认 Hesai 直接影响的细节，未作延伸判断。</li></ul></div><div class="card"><strong>对 Hesai 的谨慎判断</strong><ul><li><b>机会：</b>机器人与 ADAS 两条产品叙事均有公司官方内容更新。</li><li><b>风险：</b>两项核心命中均源自公司稿件，缺少本窗口独立媒体或社媒高互动讨论交叉验证。</li><li><b>结论：</b>暂不据此推断市场热度、订单、客户关系或估值变化。</li></ul></div></div></section>
@@ -38,7 +38,7 @@
 
   <section><h2>重点媒体与记者报道追踪</h2><p><strong>Google News RSS 初筛未发现上述重点记者过去 24 小时内新发表、且与 Hesai 相关性较高的报道；未逐篇原始媒体页核验。</strong></p><p>已按完整名单分四批执行姓名加 <code>when:1d</code> 初筛。个别批次出现同名人物、讣告或媒体一般新闻候选，无法仅据 RSS 标题和来源可靠确认作者归属，且未直接涉及 Hesai，故未纳入报道列表与影响判断。</p><p class="note">别名/校正写法纳入检索：Josh Wasington / Josh Washington、Doug Boulduc / Doug Bolduc、The Detriot News / The Detroit News、The Glass Alamac / The Glass Almanac。</p></section>
 
-  <section><h2>@aleabitoreddit 言论追踪</h2><div class="card"><span class="tag">访问受限</span><p>当前环境未暴露 <code>twitter_user_tweets</code> 或对应详情读取工具，无法核验 @aleabitoreddit 在监测窗口内的公开发言。未以搜索片段、二手转述或历史数据替代原帖。</p></div></section>
+  <section><h2>@aleabitoreddit 言论追踪</h2><div class="card"><span class="tag">请求受限</span><p><code>twitter_user_tweets</code> 已可调用但本次请求超时，无法核验 @aleabitoreddit 在监测窗口内的公开发言。未以搜索片段、二手转述或历史数据替代原帖。</p></div></section>
 
-  <section><h2>附录：范围与限制</h2><ul><li><b>社媒来源：</b>项目规定为 superpowers-social MCP；本次运行环境未提供该 MCP 的可调用工具，社媒结果均标为“未能可靠确认”。</li><li><b>新闻来源：</b>Google News RSS，检索均带 <code>when:1d</code>；RSS 仅作为候选发现源，不等同于原始媒体全文。</li><li><b>搜索关键词：</b>物理 AI、Physical AI、AI stocks、robotics AI、autonomous driving AI、lidar、Hesai、HESAI、禾赛科技、HSAI。</li><li><b>时间说明：</b>RSS 显示 UTC 的项目已换算为北京时间。RSS 无结果仅表示聚合查询未命中，不代表逐页原始媒体核验。</li></ul></section>
+  <section><h2>附录：范围与限制</h2><ul><li><b>社媒来源：</b>superpowers-social MCP 已注册并启用（streamable HTTP）；本次 X 与 Reddit 请求均失败或超时，社媒结果均标为“未能可靠确认”。</li><li><b>新闻来源：</b>Google News RSS，检索均带 <code>when:1d</code>；RSS 仅作为候选发现源，不等同于原始媒体全文。</li><li><b>搜索关键词：</b>物理 AI、Physical AI、AI stocks、robotics AI、autonomous driving AI、lidar、Hesai、HESAI、禾赛科技、HSAI。</li><li><b>时间说明：</b>RSS 显示 UTC 的项目已换算为北京时间。RSS 无结果仅表示聚合查询未命中，不代表逐页原始媒体核验。</li></ul></section>
 </main></body></html>
